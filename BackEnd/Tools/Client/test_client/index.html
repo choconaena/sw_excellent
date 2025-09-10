@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Module Request</title>
+</head>
+<body>
+    <h1>Send Requests to Node.js Server</h1>
+
+    <button id="aiButton">Run AI Module</button>
+    <button id="dbButton">Run DB Module</button>
+    <button id="remoteDataButton">Run Remote Data Module</button>
+
+    <p id="responseText"></p>
+
+    <script>
+        // 서버에 요청 보내기 위한 함수
+        async function sendRequest(endpoint) {
+            try {
+                const response = await fetch(`http://localhost:3000${endpoint}`);
+                const data = await response.text();
+                document.getElementById('responseText').innerText = data;
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('responseText').innerText = 'Request failed!';
+            }
+        }
+
+        // AI 모듈 버튼 클릭 이벤트
+        document.getElementById('aiButton').addEventListener('click', () => {
+            sendRequest('/ai');
+        });
+
+        // DB 모듈 버튼 클릭 이벤트
+        document.getElementById('dbButton').addEventListener('click', () => {
+            sendRequest('/db');
+        });
+
+        // Remote Data 모듈 버튼 클릭 이벤트
+        document.getElementById('remoteDataButton').addEventListener('click', () => {
+            sendRequest('/remotedata');
+        });
+    </script>
+</body>
+</html>

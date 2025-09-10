@@ -1,0 +1,25 @@
+{
+  "reportid": 1,
+  "reportstatus": 1,
+  "visittime": "2025-04-03 10:00",
+  "targetInfo": {
+    "targetid": 1,
+    "targetname": "이유진",
+    "address1": "대전 서구 대덕대로 150",
+    "address2": "경성 큰마을아파트 102동 103호",
+    "targetcallnum": "010-3889-3501",
+    "gender": 1,
+    "age": 77
+  },
+  "userInfo": {
+    "email": "jenny@naver.com",
+    "username": "이유진",
+    "callnum": "01012341234",
+    "birthday": "2005-01-01",
+    "etc": "대전 서부 담당자",
+    "role": 1,
+    "gender": 0
+  },
+  "visitType": "정기 방문",
+  "endTime": "2025-04-16 21:00"
+}

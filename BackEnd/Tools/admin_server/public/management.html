@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>대시보드</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f0f0f0;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background-color: #fff;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .no-data {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+    <div id="navbar" style="
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+    ">
+      <div>
+        <a href="dashboard.html" style="color: white; margin-right: 10px;">📊 대시보드</a>
+        <a href="management.html" style="color: white;">🛠️ 관리</a>
+      </div>
+      <div>
+        <span id="userEmailDisplay" style="margin-right: 10px;"></span>
+        <span id="tokenTimer" style="margin-right: 10px;"></span>
+        <button onclick="logout()" style="padding: 6px 12px;">로그아웃</button>
+      </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    <!-- 방문자 배정 -->
+    <h2>📌 방문자 배정</h2>
+    <button onclick="fetchAllVisitReports()">전체 리포트 조회</button>
+    <div id="allReportsResult"></div>
+
+    <input type="number" id="assignReportId" placeholder="Report ID (예: 4)">
+    <input type="email" id="assignEmail" placeholder="Email (예: nurse1@domain.com)">
+    <button onclick="assignUserToReport()">방문자 배정 요청</button>
+    <div id="assignResult"></div>
+
+    <!-- 대상자 전체 목록 -->
+    <h2>👥 등록된 전체 대상자 목록</h2>
+    <button onclick="fetchAllTargets()">대상자 전체 조회</button>
+    <div id="allTargetsResult"></div>
+
+    <!-- 대상자 등록 -->
+    <h2>➕ 대상자 정보 등록</h2>
+    <input type="text" id="targetName" placeholder="이름">
+    <input type="text" id="targetAddress1" placeholder="기본 주소">
+    <input type="text" id="targetAddress2" placeholder="상세 주소 (선택)">
+    <input type="text" id="targetCallnum" placeholder="연락처 (010-xxxx-xxxx)">
+    <select id="targetGender">
+    <option value="1">남자</option>
+    <option value="2">여자</option>
+    </select>
+    <input type="number" id="targetAge" placeholder="나이">
+    <button onclick="addTarget()">등록</button>
+    <div id="addTargetResult"></div>
+
+    <!-- 방문 스케줄 추가 -->
+    <h2>📅 새로운 방문 스케줄 추가</h2>
+    <input type="datetime-local" id="reportVisitTime" placeholder="방문 시간">
+    <input type="email" id="reportEmail" placeholder="담당자 이메일">
+    <input type="text" id="reportTargetName" placeholder="대상자 이름">
+    <input type="number" id="reportTargetId" placeholder="대상자 ID">
+    <button onclick="submitVisitReport()">방문 스케줄 생성</button>
+    <div id="visitReportResponse"></div>
+
+</body>
+</html>
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Python Logs + PM2 Control</title>
+    <style>
+        body {
+            font-family: monospace;
+            background: #111;
+            color: #0f0;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #0f0;
+        }
+
+        #log-container {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #0f0;
+            padding: 10px;
+            background-color: #000;
+            overflow-y: scroll;
+            white-space: pre-wrap;
+            line-height: 1.5em;
+            box-sizing: border-box;
+        }
+
+        #pm2-status {
+            margin-top: 20px;
+            border: 1px solid #0f0;
+            padding: 10px;
+            background-color: #000;
+            color: #0ff;
+            white-space: pre-wrap;
+            min-height: 100px;
+        }
+
+        button {
+            margin-top: 10px;
+            margin-right: 10px;
+            background-color: #0f0;
+            color: #000;
+            padding: 8px 16px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>🔍 STT_AI Real-Time Logs</h2>
+    <div id="log-container">
+        <div id="log"></div>
+    </div>
+
+    <button onclick="checkPM2()">📊 Check PM2 Status</button>
+    <button onclick="restartPM2('STT_AI')">🔁 Restart STT_AI</button>
+    <!-- <button onclick="restartPM2('STT-manage-server')">🔁 Restart STT-manage-server</button> -->
+
+    <div id="pm2-status">[PM2 status will appear here]</div>
+
+    <script>
+        const logDiv = document.getElementById('log');
+        const logContainer = document.getElementById('log-container');
+        const ws = new WebSocket('ws://' + location.host);
+
+        ws.onmessage = (event) => {
+            const line = document.createElement('div');
+            line.className = 'log-line';
+            line.textContent = event.data;
+            logDiv.appendChild(line);
+            logContainer.scrollTop = logContainer.scrollHeight;
+        };
+
+        ws.onclose = () => {
+            const line = document.createElement('div');
+            line.textContent = '📴 Connection closed.';
+            line.style.color = 'red';
+            logDiv.appendChild(line);
+            logContainer.scrollTop = logContainer.scrollHeight;
+        };
+
+        function checkPM2() {
+            fetch('/pm2-status')
+                .then(res => res.text())
+                .then(text => {
+                    document.getElementById('pm2-status').textContent = text;
+                })
+                .catch(err => {
+                    document.getElementById('pm2-status').textContent = '[ERROR] ' + err;
+                });
+        }
+
+        function restartPM2(name) {
+            fetch('/pm2-restart?name=' + encodeURIComponent(name))
+                .then(res => res.text())
+                .then(text => {
+                    document.getElementById('pm2-status').textContent = `[RESTART ${name}]\n` + text;
+                })
+                .catch(err => {
+                    document.getElementById('pm2-status').textContent = '[ERROR] ' + err;
+                });
+        }
+    </script>
+</body>
+</html>

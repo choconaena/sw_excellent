@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Audio Client</title>
+</head>
+<body>
+    <h1>WebSocket Audio Client</h1>
+    <input type="file" id="audioFile" accept=".wav" />
+    <p>Server Response: <span id="serverText"></span></p>
+
+    <script>
+        // WebSocket 서버 주소 설정
+        const ws = new WebSocket("ws://localhost:8765");
+
+        // WebSocket 연결 성공
+        ws.onopen = () => {
+            console.log("Connected to WebSocket server.");
+        };
+
+        // WebSocket 메시지 수신
+        ws.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            if (data.text) {
+                // 서버 응답 출력
+                console.log("Server Response:", data.text);
+                document.getElementById("serverText").innerText = data.text;
+            } else if (data.message) {
+                // 종료 메시지 수신 시 연결 종료
+                console.log(data.message);
+                ws.close();
+            }
+        };
+
+        // WebSocket 연결 종료
+        ws.onclose = () => {
+            console.log("Disconnected from WebSocket server.");
+        };
+
+        // 오디오 파일을 서버로 전송하는 함수
+        function sendAudioFile(file) {
+            const reader = new FileReader();
+
+            reader.onload = () => {
+                const audioData = reader.result;
+                ws.send(audioData);  // WebSocket을 통해 ArrayBuffer 전송
+                console.log("Audio data sent to server.");
+            };
+
+            reader.readAsArrayBuffer(file); // 파일을 ArrayBuffer로 읽기
+        }
+
+        // 파일 선택 이벤트 리스너 설정
+        document.getElementById("audioFile").addEventListener("change", (event) => {
+            const file = event.target.files[0];
+            if (file && file.type === "audio/wav") {
+                sendAudioFile(file);
+            } else {
+                console.log("Please select a valid .wav audio file.");
+            }
+        });
+    </script>
+</body>
+</html>

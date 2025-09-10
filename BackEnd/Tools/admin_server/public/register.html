@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input, select, button {
+      width: 250px;
+      padding: 10px;
+      margin: 8px 0;
+      font-size: 1rem;
+    }
+
+    #result {
+      margin-top: 10px;
+      color: red;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>회원가입</h1>
+
+    <input type="text" id="registerName" placeholder="이름">
+    <input type="text" id="registerPhone" placeholder="전화번호 (010-0000-0000)">
+    <input type="email" id="registerEmail" placeholder="Email">
+    <input type="date" id="registerBirthdate">
+
+    <select id="registerGender">
+      <option value="1">남자</option>
+      <option value="2">여자</option>
+    </select>
+
+    <input type="number" id="registerPermission" value="1" placeholder="권한 (1=일반, 0=관리자)">
+    <input type="password" id="registerPassword" placeholder="비밀번호">
+
+    <button onclick="handleRegister()">회원가입 완료</button>
+    <button onclick="location.href='index.html'">뒤로가기</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="js/register.js"></script>
+</body>
+</html>

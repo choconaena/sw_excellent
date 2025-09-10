@@ -1,0 +1,6 @@
+python-socketio[asgi]==5.11.4
+uvicorn==0.30.1
+PyJWT==2.8.0
+python-dotenv==1.0.1
+# 멀티 인스턴스 확장 시:
+# aioredis==2.0.1

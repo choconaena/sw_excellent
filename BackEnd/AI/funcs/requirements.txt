@@ -1,0 +1,10 @@
+torch
+torchaudio
+whisper
+numpy
+pyannote.audio
+scikit-learn
+pyannote.core
+wave
+ffmpeg-python
+openai-whisper

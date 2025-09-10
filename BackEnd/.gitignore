@@ -1,0 +1,36 @@
+# Node.js 관련
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+./package-lock.json
+package-lock.json
+*/__pycache__/*
+AI/funcs/llm/__pycache__/*
+AI/funcs/stt_AI/__pycache__/
+# 로그 파일들
+*.log
+.env
+# 빌드 출력 폴더
+dist/
+build/
+# 업로드 파일
+uploads/
+DB/uploaded_data/
+
+# STT test model
+model/
+
+# AI 학습 가중치 파일
+AI/funcs/python/policy_embeddings.json
+AI/funcs/summary_AI/weights/
+AI/funcs/summary_AI/__pycache__
+AI/funcs/python/__pycache__/summary_request.cpython-38.pyc
+
+AI/funcs/model
+AI/funcs/python/__pycache__//
+
+wav_to_txt_results/
+
+callRecordUploads/
+keys/

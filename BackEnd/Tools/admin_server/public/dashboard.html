@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>대시보드</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f0f0f0;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background-color: #fff;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .no-data {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+    <div id="navbar" style="
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+    ">
+      <div>
+        <a href="dashboard.html" style="color: white; margin-right: 10px;">📊 대시보드</a>
+        <a href="management.html" style="color: white;">🛠️ 관리</a>
+      </div>
+      <div>
+        <span id="userEmailDisplay" style="margin-right: 10px;"></span>
+        <span id="tokenTimer" style="margin-right: 10px;"></span>
+        <button onclick="logout()" style="padding: 6px 12px;">로그아웃</button>
+      </div>
+    </div>
+
+
+    <h1>관리자 대시보드</h1>
+
+    <h2>🗂️ 방문 스케줄 조회 (방문전)</h2>
+    <button onclick="fetchTodayList()">방문 스케줄 조회 (방문전)</button>
+
+    <div id="scheduleResult">스케줄 결과가 여기에 표시됩니다.</div>
+
+    <script src="js/dashboard.js"></script>
+
+    <hr style="margin: 2rem 0;">
+
+    
+    <h2>🗂️ 보고서 작성이전 방문 리포트 조회 (리포트 작성전)</h2>
+    <button onclick="fetchVisitedReports()">작성해야 할 리포트 조회</button>
+
+    <div id="visitedReportsResult"></div>
+
+    <hr style="margin: 2rem 0;">
+    <h2>📑 내가 작성 완료한 방문 리포트 (리포트 작성완료)</h2>
+    <button onclick="fetchResultReports()">완료된 리포트 조회</button>
+
+    <div id="resultReportsList"></div>
+
+</body>
+</html>

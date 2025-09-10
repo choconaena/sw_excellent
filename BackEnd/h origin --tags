@@ -1,0 +1,947 @@
+[33mcommit 20a0f2263933bed7394a1456396d21f20df6adb2[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;33mtag: yangcheon_v.1.0.0[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Aug 20 17:02:00 2025 +0900
+
+    YangCheon 공무원 서비스 1차 prototype Done
+
+[33mcommit 2b9c1136a17f2e0da58236c86da401a96b005736[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sun Aug 17 20:06:36 2025 +0900
+
+    Fix yangchun_license_info_edit to request reportid automatically
+
+[33mcommit c357ed9d553acd077e70a68e96827e49db1ac07a[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sun Aug 17 19:55:46 2025 +0900
+
+    Add ws https & stt_AI https
+
+[33mcommit 664d01ee28b3bb9bf4f9976070d6b55e2f559eec[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sun Aug 17 19:50:12 2025 +0900
+
+    Add stt_AI server https ver
+
+[33mcommit e531f9824ce0c712a40dc97f2ec6ecfcbb3f60a4[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sun Aug 17 01:43:11 2025 +0900
+
+    Add Construction License HWP gen
+
+[33mcommit 3d45e040c2ce7f5657be4959203f796fefb465be[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sun Aug 17 01:17:22 2025 +0900
+
+    Add license_info_edit Router
+
+[33mcommit cb23fc7b4d84083efd48375cd06279dd02989e3f[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sun Aug 17 01:08:05 2025 +0900
+
+    Add hwp report download Router
+
+[33mcommit 5da8367a55b44e0a4730ea9e2ace27e6d0535f61[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sun Aug 17 00:03:24 2025 +0900
+
+    Fix Server ERROR
+
+[33mcommit a25995ad20e2cbebbefc9d56448eba1d8d603da1[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Aug 16 23:22:14 2025 +0900
+
+    Add hwp request router funcs
+
+[33mcommit 5f290e1a3759b373c1dccc14f02e31bb45bd3210[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Aug 16 06:04:46 2025 +0900
+
+    Add yangchun_get_gov_ResultList function
+
+[33mcommit 7481d16dd9d1034e45eac9f1579f7603d7ee84e7[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Aug 16 06:01:17 2025 +0900
+
+    Add yangchun_idcard_info_upload_edit function
+
+[33mcommit 4798946cbb602865efdf262723ea8ad8c10baf89[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Aug 16 05:47:35 2025 +0900
+
+    Add fee exemption router & function
+
+[33mcommit f54ff0840c5c04b699c8ac2628ecc14dce60999e[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Aug 16 05:11:43 2025 +0900
+
+    Add get_construction_sign Router & Function
+
+[33mcommit 31f2627b5fb1bec5f45cf857739899d62e3de54a[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Aug 16 05:03:19 2025 +0900
+
+    Add msg_type in WS NEVER EDIT ws_server.js
+
+[33mcommit ae7efe16a8b4b02acbfda71c54ccbce91810b9e0[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Aug 16 04:50:06 2025 +0900
+
+    Add get_sign Router
+
+[33mcommit fc195c2407adaf1167d35efa82e519eda13e19b7[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Aug 16 04:19:53 2025 +0900
+
+    Add upload Sign DB & Implementation
+
+[33mcommit 059530bf3de6f5e8c42be3751bb97c92cfbb2079[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Aug 16 02:40:22 2025 +0900
+
+    Add hwp build request done
+
+[33mcommit e005ec6f240835717342c40f1360e9304cf0e5b7[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Aug 16 00:32:16 2025 +0900
+
+    Add Example ws transaction structure
+
+[33mcommit 7f2fa63f61c3fcfb2f1c552f754321f310e9eaec[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Aug 13 01:00:31 2025 +0900
+
+    Add yangchun DB communication Router Done
+
+[33mcommit 247d8474a46f1f83eb17d758ec7839491bd787d6[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Aug 13 00:52:53 2025 +0900
+
+    Add yangchun info open DB
+
+[33mcommit bb171d792bfcb8f5bf37ea8b0b23d8e7261bfc82[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Aug 13 00:35:59 2025 +0900
+
+    Fix filefilter to be able to process .png
+
+[33mcommit 4fb46139df4bebe692be179f53c235c0eec4eea0[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Aug 13 00:24:53 2025 +0900
+
+    Add get yangchun_get_gov_ResultList
+
+[33mcommit 125534df26584396346969101b85b6d79c4a9805[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Tue Aug 12 23:41:54 2025 +0900
+
+    Fix name check in APP & Add Web Version Router
+
+[33mcommit 49c3e279b27a620b3f3e88f3b8afe7afbceef7fe[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Tue Aug 12 23:03:54 2025 +0900
+
+    참고: ws msg send using wsHub in BackEnd Router
+
+[33mcommit 9bffa1b367d17b0644d6981dd9bf7bce028dd287[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Tue Aug 12 22:41:30 2025 +0900
+
+    InformationOpenRequest App Router Function Done
+
+[33mcommit dc63ce897934ddb1d2f7099e720bfc889777c31e[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Tue Aug 12 20:54:13 2025 +0900
+
+    Add ws msg communication by web clinet done
+
+[33mcommit eae1d7f2787cd43c4b401589d693d1e0a94df535[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Tue Aug 12 20:26:44 2025 +0900
+
+    Add Init WS/funcs in BackEnd
+
+[33mcommit dbe41a1acf1fb7aef8c86c521c9d8c9d84d24287[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Tue Aug 12 20:06:54 2025 +0900
+
+    Add init WS structure
+
+[33mcommit 82fc59d3af720dd560b905ed69ddc5c142aa47e8[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Aug 8 02:48:03 2025 +0900
+
+    Add /yangchun_idcard_info_upload & /yangchun_stt_upload_policy but yangchun_stt_upload_policy need to be replaced
+
+[33mcommit f4ac84377168282e64fe6218ebce5beb1061e10f[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Aug 1 06:48:40 2025 +0900
+
+    Add AI prompt output non-deterministic Problem Solution
+
+[33mcommit 9056883733820cc2dbd6a8e1e515b642be4838fc[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Jul 4 13:50:00 2025 +0900
+
+    Add ollama result
+
+[33mcommit 39db503dc3d190b963d646a4b22b5a4f3d2a80ce[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Jul 4 12:18:41 2025 +0900
+
+    Add Background process down-up script Using pm2
+
+[33mcommit b556956a208538b682de07d90336650c88ac9fb4[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Jul 4 12:13:50 2025 +0900
+
+    MV upload stt data to extended storage
+
+[33mcommit 73c81a4bf67cd09de1949094e4a649f6da350179[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Jul 2 04:02:03 2025 +0900
+
+    Add gemma3-4b connect Done
+
+[33mcommit d6f32788b706b3d36c447161147b4d7f699a7082[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Jul 2 02:59:50 2025 +0900
+
+    Fix yangchun_stt_abstract request using reportId
+
+[33mcommit deae3d3e07702292ccde596dcd6635b8d45f26b8[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Jul 2 02:47:22 2025 +0900
+
+    Fix getYangChunConverstationSTTtxt reportid to report_id for synchronization with MySQL Table
+
+[33mcommit 19f47390426662c24fd4ac951ef616ebaf132671[m
+Merge: 8a7f250 83f2c4f
+Author: JUNTHEWORLD <62176354+junfuture1103@users.noreply.github.com>
+Date:   Sat May 31 22:29:44 2025 +0900
+
+    Merge pull request #3 from SAFE-HI/0531Backup
+    
+    0531Backup
+
+[33mcommit 83f2c4f8899e92369b454d5fdaee52ba21086d7d[m[33m ([m[1;31morigin/0531Backup[m[33m)[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat May 31 22:22:53 2025 +0900
+
+    0531Backup
+
+[33mcommit 8a7f250066c82ddb045570ee5eb5c567c463a6ae[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat May 31 22:21:50 2025 +0900
+
+    BackUp mysql DB
+
+[33mcommit f42720ab5c574e97589b29d4c4b8ba7000bda401[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat May 31 22:19:19 2025 +0900
+
+    Update gitignore
+
+[33mcommit 994ec3ae6c8693c12566c4618690fcf876d64d4d[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Tue May 27 22:22:57 2025 +0900
+
+    We need to txt_file from AI abstract model
+
+[33mcommit 7ecc56e36dba9d5742a96a1b1f46b3ba8e6cece0[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Tue May 27 22:22:36 2025 +0900
+
+    Add stt summary req & result save But, We need to connect AI
+
+[33mcommit d26e1ef677fc8550dd8400e726e081ede7ced568[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Tue May 27 22:17:59 2025 +0900
+
+    Add websocket server metadata - reportid & email for result save
+
+[33mcommit 36c1eb073e76adde07207e8fa6fd5ef274322d36[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Mon May 26 23:02:57 2025 +0900
+
+    Add stt_upload return reportID to Client first Time
+
+[33mcommit 156622997bc4d46e0117563fc1a819ced74acc7b[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Mon May 26 22:42:56 2025 +0900
+
+    Add After STT websocket stream, Then update YangChun_VisitReport Table transcript_file path Automatically
+
+[33mcommit 667dbb07e144f4c851258ac1a4162eeb3fdc734f[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Mon May 26 21:48:28 2025 +0900
+
+    Add yangchun_stt_abstract Router
+
+[33mcommit e1c32370c792189354e29364dcbaa3b59bd35629[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Mon May 26 21:39:58 2025 +0900
+
+    Add getYangChunConverstationSTTtxt Router Done
+
+[33mcommit f8ffb40d9ac1fd5285f88d0adf59fef96035d0ba[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Mon May 26 21:15:21 2025 +0900
+
+    Add yangchun_getResultList Router
+
+[33mcommit 375e93b4062521bd309ccd3b7d8367b0b6e3c216[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Mon May 26 21:02:50 2025 +0900
+
+    Add Fix isEmailDuplicate id -> user_id
+
+[33mcommit 5b6b5b17270734c2397bf6e442a4c543f82eee8d[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Mon May 26 20:56:31 2025 +0900
+
+    Add stt_upload - I mean Stt initialization Router
+
+[33mcommit dfe89e562b6f4edbcdae23e790742c7190fe68ef[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Mon May 26 20:53:25 2025 +0900
+
+    Add email_check Done
+
+[33mcommit 2a39bc680d914a7673bf20ec73147884c6e03c1d[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed May 21 18:11:43 2025 +0900
+
+    Add jwt token session expire time set to 1h
+
+[33mcommit ce58a6c1731aa18f7401e0113962733568891e9d[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed May 21 18:08:13 2025 +0900
+
+    Add page seperation
+
+[33mcommit 5f7c1eb7ac232bac498d215393d6a7a16d6bde21[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed May 21 16:55:58 2025 +0900
+
+    Add report status update router
+
+[33mcommit f4bc7341dd02c85604dd258fb9c6c3aa30eb73ee[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed May 21 16:44:03 2025 +0900
+
+    Add get Result Report Router & Function
+
+[33mcommit 69c4e03015a75f6cd1e3e849c21aca2e2ad20532[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed May 21 16:40:26 2025 +0900
+
+    Add GET Result Report
+
+[33mcommit c94d6c6e5ceceac97a0c0826a585e989d7d4abcc[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed May 21 16:12:57 2025 +0900
+
+    Add Target & Visit Report Insertion
+
+[33mcommit a1139ff11e10d4d7a7652ea6997202a92804d1c9[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed May 21 16:11:57 2025 +0900
+
+    Add Visit Report Creation
+
+[33mcommit 9c09b318b6fa89e1faeba37b3ca2cadf9972e149[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed May 21 15:55:11 2025 +0900
+
+    Add addTarget
+
+[33mcommit 3e60a578510d3269464865a8f3fe30ebb1b593b8[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Tue May 20 04:12:54 2025 +0900
+
+    Add All Report GET
+
+[33mcommit f12e557e826f77c73f4d0d3e6c5eb6d0dfd32a3c[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Tue May 20 04:03:36 2025 +0900
+
+    Add User to Report Done
+
+[33mcommit 4ff17c67f54dfce7c9d7ec0e76cf427b5f89cd81[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Tue May 20 03:56:29 2025 +0900
+
+    Add getTodayList for the specific User & set UserToReport Router
+
+[33mcommit ec43bb8e7deb4a50bd6cbb4346221ecf5b31952f[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Tue May 20 03:08:25 2025 +0900
+
+    Add admin page first commit
+
+[33mcommit 84e288bf73af6d18fa68285e7299f2fd703fbdc9[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed May 14 15:36:56 2025 +0900
+
+    It is more better to use 443port for us
+
+[33mcommit f05f2e5bc289a11de48c2b1990d5c97bff729a20[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed May 14 15:34:24 2025 +0900
+
+    Add https
+
+[33mcommit 6144c55ffe75c8d97893baa605b6f28edbcf42ab[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Tue Apr 29 23:04:20 2025 +0900
+
+    Add CallRecord Router
+
+[33mcommit e8ef437b5f41116cac96d2e0c8aca0a1d69938c7[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Apr 19 00:03:11 2025 +0900
+
+    Add getReport Done
+
+[33mcommit d5c38c34a850fbdf02bb5e389b32fbca2a2979b3[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Apr 18 23:36:25 2025 +0900
+
+    Add json_to_docx
+
+[33mcommit 7e0f6ff728f3af68d2a296e9f79ffc643b9f7a4b[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Apr 18 23:05:14 2025 +0900
+
+    Fix WelfarePolicies check_status update Error
+
+[33mcommit 3ad9ebc11ba93757be2d4e5f3c7f6560ab2ee66f[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Apr 18 22:30:05 2025 +0900
+
+    Fix welfare-policies return json data type
+
+[33mcommit 84c70149291a513319d7ad73dab0e46cf05fa1c6[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Apr 18 22:09:02 2025 +0900
+
+    Add getConverstationSTTtxt
+
+[33mcommit 5199f07844fe029eba3bdba9f0283df159f8f862[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Apr 18 22:03:40 2025 +0900
+
+    Add uploadCheckPolicy Done
+
+[33mcommit 7f20a7aa63d90a47d7acd807398dd42be6e3ea20[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Apr 18 21:53:12 2025 +0900
+
+    Add uploadEditAbstract Done
+
+[33mcommit 318802838f3b697ccd541a2c273a29ee54652483[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Apr 18 21:46:59 2025 +0900
+
+    Add getVisitDetails include start to end time
+
+[33mcommit ae056ea4b18e5372900c1ed6434130902fc4167e[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Thu Apr 17 04:28:44 2025 +0900
+
+    Add stt text cleaning
+
+[33mcommit 7af3b7292d2e03bc80371fa5e6c2bb88834743eb[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Thu Apr 17 03:34:38 2025 +0900
+
+    Add websocket client seperation send
+
+[33mcommit 826b0af32805229d74639e814a8c3b36221bcfcc[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Thu Apr 17 01:20:43 2025 +0900
+
+    Add STT AI for 2st POC Done
+
+[33mcommit 48de93989ec8210b54be7dcce2b291266efce53d[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Apr 16 04:25:49 2025 +0900
+
+    Fix ws port to 8085 & Add ws client that send mic stream to whisper model (stt_AI/server.py)
+
+[33mcommit b043d57ba04168f1b04e79599132c645694ba1b5[m[33m ([m[1;33mtag: v2.0[m[33m)[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Apr 16 03:51:58 2025 +0900
+
+    Add Img Upload Router Implementation Done
+
+[33mcommit 2784a6b6e891d3adafd255274aa9335263d71727[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Apr 16 02:59:18 2025 +0900
+
+    Fix return type uploadReport* Router <-> implementation
+
+[33mcommit 2270ee206ebefdae611c06aa3bde3d570b34fd8c[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Apr 16 02:27:19 2025 +0900
+
+    Add Update getVisitDetails using only reportID
+
+[33mcommit 34759a2615b6faa9dc21f13fcbc093cda88f0d09[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Apr 16 02:16:14 2025 +0900
+
+    Add upload Detail Done
+
+[33mcommit 043cb8aeec9e3ab1accc064908824c0b07746dfd[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Apr 16 01:19:20 2025 +0900
+
+    Update .gitignore
+
+[33mcommit 609e2551b2fc4be3333442bb33ec9b6df228cbe7[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Apr 16 01:18:02 2025 +0900
+
+    Add uploadReportDefaultInfo Router
+
+[33mcommit 915369d31cc68f992ecbe630ea6c56e2b68565b3[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Apr 16 00:46:18 2025 +0900
+
+    Update getTargetInfo to use Targets Table No Target. & Delete ScheduleList Table -> Our Clients are not just Schedulegit add URIProcess/DB_URI_Process.js!
+
+[33mcommit bf7e4eca14f5a6ac9bba1fcaf2d75afb28b12a35[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Apr 16 00:31:20 2025 +0900
+
+    Add status 1 & 2 case ReportList get
+
+[33mcommit 52be0643cf1b71c86b06feb24fa3e5d43ce9840d[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Apr 16 00:26:22 2025 +0900
+
+    Fix getScheduleList() ->  getTodayList()
+
+[33mcommit 48da464d4dd331ca7fd438ff8d10b280590b6d96[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Tue Apr 15 21:03:58 2025 +0900
+
+    WE MUST KEEP THIS MODELS PATH for preventing OOM
+
+[33mcommit 7944defeb01f9a59526079600289cb294a8a0c58[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Tue Apr 15 21:03:28 2025 +0900
+
+    Add STT model (whisper) to the BackeEnd
+
+[33mcommit 2969e91e5a66aa3fa8a0f1710f5f96258801a7f8[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Mon Apr 14 23:41:38 2025 +0900
+
+    Add uploadReportImage functions init but we have to implementation it
+
+[33mcommit d4f6ac1d3bcce4b1246537be86d2a428f566c3b3[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Mon Apr 14 23:40:17 2025 +0900
+
+    Add DB fix for 2nd POC & Add upload report function
+
+[33mcommit 7ebdfdaf17415ef75f4ebfdfe3f7acae4b7a1baa[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Mon Apr 14 23:39:34 2025 +0900
+
+    Add websocket real-time txt sending test
+
+[33mcommit 8b3bd7fc2cbb24f521e3c66537b8f5ee3d20b5f0[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Apr 11 23:56:06 2025 +0900
+
+    Add start_service.sh for Boot safe-hi service
+
+[33mcommit b942bee5f14875171ff876987ec1c085473d2a9b[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Apr 11 23:11:37 2025 +0900
+
+    Del vosk stt test code
+
+[33mcommit 1e6b486ef4ea8211b4b7b00f3af427c582748c06[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Apr 11 23:09:12 2025 +0900
+
+    Add policy recommendation & RAG re-evaluate policy result
+
+[33mcommit 1c7aa5faa0a06877e1e9566ac9358f804f8a5b5f[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Apr 11 22:53:47 2025 +0900
+
+    Add embedding json insert to the ESDB
+
+[33mcommit 851141460d90a4c98c8c71f1a9ee442ed4a06e51[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Apr 11 22:28:37 2025 +0900
+
+    Fix embedding server code name
+
+[33mcommit a1e922fa9a488ba4f271e0d368a3b430024c2490[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Apr 11 22:27:56 2025 +0900
+
+    Add llm functions by minseok 1-5 Intergration to one main.py in the llm dir
+
+[33mcommit 1c2a1699f268fffbcf61d6ac1cb3f86777bf2791[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Apr 11 21:57:26 2025 +0900
+
+    Add embedding model load seperation
+
+[33mcommit 6afa1d0f0e0eb1a88e5b7e6504217036f22facc9[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Apr 11 21:18:11 2025 +0900
+
+    Add stt->abstract LLM module connection
+
+[33mcommit eefa654b5df142a37a23d0c93d09758d4c1c047f[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Apr 11 15:24:23 2025 +0900
+
+    Done Login DB Router & Query function
+
+[33mcommit ecb09a038ef127615f21ee7a8fb87a4aba64cb39[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Apr 11 15:23:41 2025 +0900
+
+    Add TMP vosk stt server for TESTING & Add clean up codes in Mainserver.js
+
+[33mcommit 7833d6a2a753f9cc1390dbbc41149d9463cc35ff[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Apr 11 15:22:53 2025 +0900
+
+    Add real-time stream processing python code seperation
+
+[33mcommit 04673077c7da724cd3080f42cad376e2b828328e[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Apr 9 17:34:04 2025 +0900
+
+    Add Login res status msg
+
+[33mcommit 505641b6c929534fa5f5b34f422c72b18fc7a13b[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Apr 9 17:09:49 2025 +0900
+
+    Add Target List & Target Info req
+
+[33mcommit 8ce6eb612d549be3cca9da3e33a2d9b4ce9c132e[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Apr 9 16:46:30 2025 +0900
+
+    Done Login & Password Routing API
+
+[33mcommit a2602882a57dc8c26197baef3fe8b45612748c16[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Apr 2 05:25:53 2025 +0900
+
+    Fix OOM -> force quit process that use too many RAM area
+
+[33mcommit 6a9e81d09704169102e826d844a1aef71090590c[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Apr 2 05:12:22 2025 +0900
+
+    get Audio stream Done
+
+[33mcommit 75a5164d211329075854b632c9e4a73cef1f739c[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Apr 2 03:18:48 2025 +0900
+
+    Add policy_embeddings for Elastic Search & websocket test code
+
+[33mcommit 4fd1a47edc6fb1ae13c89febd4e3abf81b67d7f3[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Apr 2 03:13:23 2025 +0900
+
+    Fix Disk Management(mv models to another Disk & Make symbolic link in the model/
+
+[33mcommit 6486781d892fea3cf2ab400c2569b8e390835550[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Mar 19 18:57:30 2025 +0900
+
+    Add real time stream websocket base
+
+[33mcommit 1e88652340ff753c00511741c3ab12d55683054f[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Mar 19 18:51:34 2025 +0900
+
+    Add elastic db setting sh
+
+[33mcommit d90fa25b467415da44855063a578a188d1c3e35a[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Fri Mar 14 00:53:34 2025 +0900
+
+    Add Login & stream client
+
+[33mcommit 8bea31279116403615934c65a1cf42edac32484b[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Mar 12 15:01:23 2025 +0900
+
+    2nd POC init
+
+[33mcommit 961a5b2c5cf03d6583547a5631bc96c618de98ba[m
+Author: JUNTHEWORLD <62176354+junfuture1103@users.noreply.github.com>
+Date:   Tue Mar 4 22:04:25 2025 +0900
+
+    Update setup.sh
+
+[33mcommit 0aff58036f01f5b0044291f1657e9ea200bc5525[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Tue Mar 4 21:11:02 2025 +0900
+
+    Add setup.sh
+
+[33mcommit 5afca90eba80638f27e137320ee67b615b1c4f28[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Wed Feb 12 21:04:07 2025 +0900
+
+    1st POC done
+
+[33mcommit 006e7495dfa93f56c2301808a8247b6741540e03[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Thu Feb 6 16:26:23 2025 +0900
+
+    summary function connect to Mainserver
+
+[33mcommit 3d84636f3f411f5e93559836d6751eb4a2f188c1[m
+Merge: 034923d d0342eb
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Thu Feb 6 15:53:58 2025 +0900
+
+    Merge branch 'master' of https://github.com/SAFE-HI/BackEnd
+
+[33mcommit 034923d730e3ca667e746c811d9d30819b7adf78[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Thu Feb 6 15:53:02 2025 +0900
+
+    Add summary AI & Fix wrong wav format recompile
+
+[33mcommit d0342eb50c7d2fd15cf0c7a070b6f4d190e810c5[m
+Author: juntheworld <junfuture1103@naver.com>
+Date:   Thu Feb 6 15:39:47 2025 +0900
+
+    Remove Observing & Consider exactly Timing for processing wav
+
+[33mcommit 35fb6e443888e1933a331806167f62a92acf5238[m
+Merge: 99ee3de a424c06
+Author: juntheworld <junfuture1103@naver.com>
+Date:   Fri Jan 17 03:26:00 2025 +0900
+
+    Merge branch 'master' of https://github.com/SAFE-HI/BackEnd
+
+[33mcommit 99ee3de23cfbadc4f9f6c133b6cb944a073e7722[m
+Author: juntheworld <junfuture1103@naver.com>
+Date:   Fri Jan 17 03:25:04 2025 +0900
+
+    Add SQL Backup
+
+[33mcommit a424c06fc61a1dfead574b2bc2a39490479fe894[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sun Dec 22 00:42:58 2024 +0900
+
+    Refactorying wav_to_txt_process.py => done stt but we have a GPU performance issue
+
+[33mcommit 9550a7886c18d31f59825095fe342ed00640789e[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Dec 21 21:41:32 2024 +0900
+
+    Add wav_to_txt_process & processing logic
+
+[33mcommit f3e5e29703580c00dd5b0d7f02b6838845e5189f[m
+Author: JUNTHEWORLD <62176354+junfuture1103@users.noreply.github.com>
+Date:   Sat Dec 21 20:54:38 2024 +0900
+
+    Create ReadMe.md
+
+[33mcommit 13c272775215cb743baa262ae04885b523538aca[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Dec 21 20:49:18 2024 +0900
+
+    Add WAV observer
+
+[33mcommit a88a5edd8ec83d834685a20bdddd4a755d8e92f1[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Dec 21 03:17:07 2024 -0500
+
+    Add .wav communication
+
+[33mcommit 3914f5d3882c0911c5a153827aafe6548e978c71[m
+Author: juntheworld <junfuture1103@naver.com>
+Date:   Sun Nov 10 19:25:49 2024 +0900
+
+    Add backEnd
+
+[33mcommit b9c7c27174257e38db03c688f46afe78070bf61c[m
+Merge: 129b6bc dee9c5f
+Author: juntheworld <junfuture1103@naver.com>
+Date:   Sun Nov 10 18:56:45 2024 +0900
+
+    Merge branch 'master' of https://github.com/SAFE-HI/BackEnd
+
+[33mcommit 129b6bc5a34e7c31e68e08a4ebffee60ebf9d718[m
+Author: juntheworld <junfuture1103@naver.com>
+Date:   Sun Nov 10 18:55:54 2024 +0900
+
+    Add front Sync : appropriate questions per checklists
+
+[33mcommit dee9c5fe37217031b8bd4fbb0ec7811fc222bf84[m
+Author: JUNTHEWORLD <62176354+junfuture1103@users.noreply.github.com>
+Date:   Wed Nov 6 02:25:57 2024 +0900
+
+    Update ReadMe.md
+
+[33mcommit e2b9968e1f007e43d9ef661121ed3f1b54dab1b7[m
+Author: JUNTHEWORLD <62176354+junfuture1103@users.noreply.github.com>
+Date:   Wed Nov 6 02:25:37 2024 +0900
+
+    Create ReadMe.md
+
+[33mcommit 7e3b89c46b0edc2cf3a7e75b2ad6f9b591ac6082[m
+Author: JUNTHEWORLD <62176354+junfuture1103@users.noreply.github.com>
+Date:   Wed Nov 6 02:13:48 2024 +0900
+
+    Update AI_URI_Process.js
+
+[33mcommit 42f09fefb0a1bca890d4fd985e4bbfbd26b4965a[m
+Author: JUNTHEWORLD <62176354+junfuture1103@users.noreply.github.com>
+Date:   Wed Nov 6 01:59:09 2024 +0900
+
+    Update ReadMe.md
+
+[33mcommit f03d36f9bc518c6cc107bba90363df0112323b68[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Mon Nov 4 11:47:15 2024 -0800
+
+    Add docs directorys & remove *.wav
+
+[33mcommit 91593cfe97ae531f281c9448883584c33f27cfbc[m
+Author: JUNTHEWORLD <62176354+junfuture1103@users.noreply.github.com>
+Date:   Tue Nov 5 04:44:52 2024 +0900
+
+    Add files via upload
+
+[33mcommit 5fe87caa1ce88997f2282968f2c36b19420eafeb[m
+Author: JUNTHEWORLD <62176354+junfuture1103@users.noreply.github.com>
+Date:   Tue Nov 5 04:43:52 2024 +0900
+
+    Create docs
+
+[33mcommit e3376f84e015056ea58ea3fc1c256ff01a577e80[m
+Author: juntheworld <junfuture1103@naver.com>
+Date:   Tue Nov 5 00:10:39 2024 +0900
+
+    Add ConversationLogs Summary
+
+[33mcommit f1d9fb891349def67e99276c28ea9f84a1b448fe[m
+Author: juntheworld <junfuture1103@naver.com>
+Date:   Mon Nov 4 22:54:36 2024 +0900
+
+    Add WelfarePolicy Table
+
+[33mcommit e942a89a653662f6326d046a0fcc790bc62ca2a9[m
+Author: juntheworld <junfuture1103@naver.com>
+Date:   Fri Nov 1 20:38:26 2024 +0900
+
+    remove .wav
+
+[33mcommit 4938636524a2e39e5de0668a5f02c9b690c131b5[m
+Author: juntheworld <junfuture1103@naver.com>
+Date:   Fri Nov 1 20:37:52 2024 +0900
+
+    Add checklist update query & ex_update_client.js
+
+[33mcommit 5cfdbcaa7183044c769d5203023eac517ea35cbf[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Oct 26 09:01:26 2024 -0400
+
+    Add /upload route
+
+[33mcommit c70ad8bcc7f29f956ad6a96f0823f8bf52c514c6[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Oct 26 05:16:18 2024 -0400
+
+    Add websocket for real-time stt translate
+
+[33mcommit 46d8924961aae739706a6f304f835f5b76e28ddb[m
+Author: JUNTHEWORLD <62176354+junfuture1103@users.noreply.github.com>
+Date:   Sat Oct 19 21:13:35 2024 +0900
+
+    Update ReadMe.md
+
+[33mcommit c189c4001ff5d3fdb85d38d604497cd29bd1751b[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Oct 19 06:46:27 2024 -0400
+
+    Some Bug Fix & Add DB_client Tools & Add Done Picture
+
+[33mcommit 3d8463fc8a04b02c3b25830ed98d6eca929dd187[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Oct 19 06:35:29 2024 -0400
+
+    Add DB readMe
+
+[33mcommit 38cdef265db0bf74b12bff82b21e29edb81f045f[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Oct 19 06:34:26 2024 -0400
+
+    Add DB Query func
+
+[33mcommit 6c527cc54fca98c52a5460d0083167720f26d70c[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Sat Oct 19 05:55:53 2024 -0400
+
+    Add utils & DB mysql Query
+
+[33mcommit c997774333b28887ce26ab890d6a0e54b3cfbff3[m
+Author: JUNTHEWORLD <62176354+junfuture1103@users.noreply.github.com>
+Date:   Thu Oct 3 19:30:28 2024 +0900
+
+    SAFE-HI slack subscribe test
+
+[33mcommit 685967298d7ac6b3d601c87a24429fbcd6506956[m
+Author: JUNTHEWORLD <62176354+junfuture1103@users.noreply.github.com>
+Date:   Thu Oct 3 19:07:52 2024 +0900
+
+    Update ReadMe.md
+
+[33mcommit 7094563783b1161cb7aa440b74ffe80837a2e136[m
+Author: JUNTHEWORLD <62176354+junfuture1103@users.noreply.github.com>
+Date:   Thu Oct 3 18:59:39 2024 +0900
+
+    Update ReadMe.md
+
+[33mcommit 5f7996884b559d11d466a38181b7534d5a0df23b[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Thu Oct 3 02:58:44 2024 -0700
+
+    Add ReadMe.md
+
+[33mcommit 05b015c05903f55fab2e38d6e242250023a18de5[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Thu Oct 3 02:38:48 2024 -0700
+
+    We don't need URIProcess.js -> just move to URIProcess/
+
+[33mcommit d725454f82fe4b2c0cf85fb8603ee283dccd6f5b[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Thu Oct 3 02:35:42 2024 -0700
+
+    AI - python local script connect Done.
+
+[33mcommit 11afdac11736e1a8af4548048253e21496998bcf[m
+Author: junfuture1103 <junhak1103@naver.com>
+Date:   Thu Oct 3 02:12:26 2024 -0700
+
+    initialize Server Architecture
+
+[33mcommit f819998792a5aac372e9311113db04cbf9b68167[m
+Author: gnbon <borngunk7061@naver.com>
+Date:   Thu Sep 19 09:17:20 2024 -0700
+
+    first commit
