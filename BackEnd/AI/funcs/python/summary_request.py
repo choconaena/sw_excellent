@@ -2,7 +2,7 @@ import requests
 
 def summarize(text, max_len=500):
     # 서버 URL
-    url = "http://127.0.0.1:5000/summarize"
+    url = "http://127.0.0.1:25000/summarize"
 
     # 요청 데이터
     data = {

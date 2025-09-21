@@ -2,9 +2,9 @@ const WebSocket = require('ws');
 const mic = require('mic');
 
 // 귀하가 제공한 WebSocket 서버 주소와 포트
-//const ws = new WebSocket('ws://127.0.0.1:5000');
+//const ws = new WebSocket('ws://127.0.0.1:25000');
 
-const ws = new WebSocket('ws://211.188.55.88:8085');
+const ws = new WebSocket('ws://211.188.55.88:28085');
 
 ws.on('open', () => {
     console.log('서버와 연결되었습니다. 마이크 입력 스트리밍 시작...');

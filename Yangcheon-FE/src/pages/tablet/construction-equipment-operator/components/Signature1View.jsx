@@ -59,7 +59,7 @@ const Signature1View = ({ onComplete }) => {
   const [submitted, setSubmitted] = useState(false);
 
   const [previewUrl, setPreviewUrl] = useState("");
-  const [previewSize, setPreviewSize] = useState(0);
+  //const [previewSize, setPreviewSize] = useState(0);
 
   const color = "#000";
   const baseWidth = 2.2;
@@ -172,7 +172,7 @@ const Signature1View = ({ onComplete }) => {
     if (previewUrl) {
       URL.revokeObjectURL(previewUrl);
       setPreviewUrl("");
-      setPreviewSize(0);
+      //setPreviewSize(0);
     }
   };
 
@@ -215,7 +215,7 @@ const Signature1View = ({ onComplete }) => {
       if (previewUrl) URL.revokeObjectURL(previewUrl);
       const url = URL.createObjectURL(blob);
       setPreviewUrl(url);
-      setPreviewSize(blob.size);
+      //setPreviewSize(blob.size);
 
       // 서비스는 reportId를 인자로 주지 않아도 store 값을 사용
       const result = await submitConstructionSignature({ num: 1, blob });
@@ -277,7 +277,7 @@ const Signature1View = ({ onComplete }) => {
         />
       </S.SignatureArea>
 
-      {previewUrl && (
+      {/* {previewUrl && (
         <div
           style={{
             display: "flex",
@@ -322,7 +322,7 @@ const Signature1View = ({ onComplete }) => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
 
       {!submitted && (
         <S.Toolbar>

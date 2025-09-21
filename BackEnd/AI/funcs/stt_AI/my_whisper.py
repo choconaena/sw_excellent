@@ -1,4 +1,4 @@
-#/home/BackEnd/AI/funcs/stt_AI/my_whisper.py
+#/new_data/sw_excellent/BackEnd/AI/funcs/stt_AI/my_whisper.py
 # -*- coding: utf-8 -*-
 #sam 밑 
 

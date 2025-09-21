@@ -1,4 +1,4 @@
-#/home/BackEnd/AI/funcs/stt_AI/server.py
+#/new_data/sw_excellent/BackEnd/AI/funcs/stt_AI/server.py
 # -*- coding: utf-8 -*-
 """
 실시간 한국어 STT 서버 (FSM / MFCC+RMS 기반 최종 결과 업데이트)
@@ -32,7 +32,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 SAMPLE_RATE = 16000
 HOST = "0.0.0.0"
-PORT = 8085
+PORT = 28085
 
 model_path = "/model/my_whisper"
 
@@ -104,8 +104,8 @@ async def handle_client(websocket, path=None):
     print(f"[{client_id}] STT 모델 로드 완료 메시지 전송")
 
     # --- before creating files, ensure upload directory exists ---
-    base_dir = "/new_data"                                 # 고정 경로
-    upload_dir = os.path.join(base_dir, "upload3")          # /new_data/upload
+    base_dir = "/new_data/sw_excellent"                                 # 고정 경로
+    upload_dir = os.path.join(base_dir, "upload")          # /new_data/upload
     os.makedirs(upload_dir, exist_ok=True)                 # 디렉터리 없으면 생성
 
     # 각 클라이언트별 파일명

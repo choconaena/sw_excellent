@@ -82,7 +82,7 @@ RATE = 44100
 CHUNK = 1024
 
 # WebSocket 서버 시작
-start_server = websockets.serve(audio_handler, "localhost", 8765)
+start_server = websockets.serve(audio_handler, "localhost", 28765)
 
 # 비동기 이벤트 루프 실행
 asyncio.get_event_loop().run_until_complete(start_server)

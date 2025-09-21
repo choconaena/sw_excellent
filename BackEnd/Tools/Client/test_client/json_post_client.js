@@ -26,7 +26,7 @@ const visitReport = {
   visitType: "긴급방문"
 };
 
-axios.post('http://localhost:3000/db/uploadReportDefaultInfo', visitReport)
+axios.post('http://localhost:23000/db/uploadReportDefaultInfo', visitReport)
   .then(res => {
     console.log('✅ 서버 응답:', res.data);
   })

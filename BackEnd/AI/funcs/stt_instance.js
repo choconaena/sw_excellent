@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // WebSocket 서버 주소 설정
-const ws = new WebSocket('ws://localhost:8765');
+const ws = new WebSocket('ws://localhost:28765');
 
 // 서버 응답 수신
 ws.on('open', () => {

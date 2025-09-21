@@ -30,6 +30,7 @@ export const Container = styled.div`
   background-color: #fff;
   display: flex;
   flex-direction: column;
+  min-height: 0;
 `;
 
 export const Content = styled.div`
@@ -228,6 +229,9 @@ export const SearchContainer = styled.div`
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
+
+  width: 100%;
+  justify-content: space-between;
 `;
 
 export const SearchDropdown = styled.div`
@@ -629,4 +633,66 @@ export const ModalButton = styled.button`
       background-color: #5a6268;
     }
   `}
+`;
+
+export const DownloadBar = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.75rem 0 1rem 0;
+`;
+
+export const HelpWrap = styled.div`
+  position: absolute;
+  top: -6px; /* 버튼 우상단 */
+  right: -6px;
+`;
+
+export const HelpIcon = styled.span`
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #eef0f2;
+  color: #555;
+  font-weight: 700;
+  font-size: 0.75rem;
+  cursor: default;
+  user-select: none;
+  border: 1px solid #d1d5db;
+  line-height: 1;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(169, 57, 70, 0.18);
+  }
+
+  /* 호버/포커스 시 툴팁 표시 */
+  &:hover + div,
+  &:focus + div {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+`;
+
+export const HelpTooltip = styled.div`
+  position: absolute;
+  top: -50%;
+  right: 125%;
+  transform: translateY(-50%) translateX(6px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.18s ease;
+  background: #eef0f2;
+  color: #555;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  z-index: 10;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 `;

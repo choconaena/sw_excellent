@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 // Base URL of your API
-const BASE_URL = 'http://127.0.0.1:3000/db/users';
+const BASE_URL = 'http://127.0.0.1:23000/db/users';
 
 // Function to get a user by ID
 async function getUser(userId) {

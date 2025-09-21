@@ -113,7 +113,7 @@ io.on("connection", (socket) => {
 // 상태 체크용 HTTP 엔드포인트(선택)
 app.get("/", (_req, res) => res.send("WS OK"));
 
-const PORT = process.env.WS_PORT || 8086;
+const PORT = process.env.WS_PORT || 28086;
 httpServer.listen(PORT, () => {
   console.log(`WS listening on :${PORT}`);
 });

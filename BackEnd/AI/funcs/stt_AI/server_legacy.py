@@ -1,4 +1,4 @@
-#/home/BackEnd/AI/funcs/stt_AI/server.py
+#/new_data/sw_excellent/BackEnd/AI/funcs/stt_AI/server.py
 # -*- coding: utf-8 -*-
 """
 실시간 한국어 STT 서버 (FSM / MFCC+RMS 기반 최종 결과 업데이트)
@@ -28,7 +28,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 SAMPLE_RATE = 16000
 HOST = "0.0.0.0"
-PORT = 8085
+PORT = 28085
 
 model_path = "/mnt/a/models/my_whisper"
 

@@ -9,7 +9,7 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');  // npm install axios
 
-const WS_SERVER = process.env.WS_SERVER || "http://localhost:8086";
+const WS_SERVER = process.env.WS_SERVER || "http://localhost:28086";
 
 router.use(express.json());
 
@@ -125,7 +125,7 @@ router.get('/getReport/:reportid', async (req, res) => {
 // 업로드 디렉토리 설정
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-      const uploadPath = '/new_data/upload_sign';
+      const uploadPath = '/new_data/sw_excellent/upload_sign';
   
       // 디렉토리 존재하지 않으면 생성
       if (!fs.existsSync(uploadPath)) {
@@ -1353,7 +1353,6 @@ router.post('/yangchun_stt_upload_ws_client', dbModule.authenticateToken, async 
 
   try {
     // DB에 저장 시작 이력 기록 또는 준비 작업 (옵션)
-    console.log('/yangchun_stt_upload_ws_client')
     const reportid = await dbModule.prepareSttFile(stt_file_name, req.user.email); // JWT 토큰에서 유저 정보 추출 가정
     console.log("yangchun_stt_upload_ws_client", reportid)
     /////////////// ws 연결 - 앱웹 통신 /////////////// 
@@ -1924,65 +1923,77 @@ router.post('/update_visit_category', async (req, res) => {
 });
 
 //////////////////////////// hwp funcs /////////////////////
-
 // GET /generate-hwp/:reportid
 router.get("/generate-hwp/:reportid", async (req, res) => {
   const { reportid } = req.params;
 
   try {
-    // TODO: DB 조회 or 매핑 로직 (여기서는 예시로 하드코딩)
-    // const imagePath = `/new_data/upload_sign/reportID-${reportid}-imgfile-1755012875902-964112609.png`;
+    let applicantData, summaryData, methodData, feeData, imagePath;
 
-    // const applicantData = {
-    //   name: "이준학",
-    //   birthDate: "2000.11.03",
-    //   address: "대전시 서구 계룡로 279번길 11 205호",
-    //   passport: "MQ123456",
-    //   phone: "010-6557-0010",
-    //   email: "junhak1103@Naver.com",
-    //   fax: "02-3421-1720",
-    //   businessNumber: "12345-12525",
-    //   gender: "남",
-    // };
+    // 1) DB 조회
+    try {
+      ({ applicantData, summaryData, methodData, feeData, imagePath } =
+        await dbModule.buildPayloadFromDB(reportid));
+    } catch (err) {
+      console.error("❌ DB 조회 실패:", err.message);
+      return res.status(500).json({
+        success: false,
+        step: "buildPayloadFromDB",
+        error: err.message,
+      });
+    }
 
-    // const summaryData = {
-    //   content: `[데이터 청구] ReportID ${reportid} 정보공개청구`,
-    //   isPublic: true,
-    // };
+    const file_name = `/new_data/sw_excellent/upload/hwp/open_information/report_open_information${reportid}.hwp`;
 
-    // const methodData = {
-    //   disclosureMethods: [0, 1, 1, 0, 0],
-    //   receiveMethods: [1, 0, 0, 0, 1],
-    //   otherDisclosureMethod: "이메일로 보내주세요",
-    //   otherReceiveMethod: "기발한 방법으로 보내주세요",
-    // };
+    // 2) HWP 생성
+    try {
+      console.log("postAndDownloadHWP 실행:", {
+        applicantData,
+        summaryData,
+        methodData,
+        feeData,
+        imagePath,
+      });
+      await postAndDownloadHWP(
+        imagePath,
+        applicantData,
+        summaryData,
+        methodData,
+        feeData,
+        file_name
+      );
+    } catch (err) {
+      console.error("❌ HWP 생성 실패:", err.message);
+      return res.status(500).json({
+        success: false,
+        step: "postAndDownloadHWP",
+        error: err.message,
+      });
+    }
 
-    // const feeData = {
-    //   exemptionType: "exempt",
-    //   exemptionReason: "연구목적 또는 행정감시",
-    // };
-////////////////////////////////////////////////////////////////
-    const { applicantData, summaryData, methodData, feeData, imagePath } =
-      await dbModule.buildPayloadFromDB(reportid);
+    // 3) DB 업데이트
+    try {
+      await dbModule.updateReportFilePath(reportid, file_name);
+    } catch (err) {
+      console.error("❌ DB file_path 업데이트 실패:", err.message);
+      return res.status(500).json({
+        success: false,
+        step: "updateReportFilePath",
+        error: err.message,
+      });
+    }
 
-
-    const file_name = `/new_data/upload/hwp/open_information/report_open_information${reportid}.hwp`;
-    console.log("postAndDownloadHWP call before", applicantData, summaryData, methodData, feeData, imagePath)
-    await postAndDownloadHWP(imagePath, applicantData, summaryData, methodData, feeData, file_name);
-
-    // history를 위한 file_path 업데이트
-    await dbModule.updateReportFilePath(reportid, file_name)
-
-    // 성공 응답
+    // 최종 성공 응답
     res.json({
       success: true,
       message: `✅ HWP 파일 생성 완료: ${file_name}`,
       file: file_name,
     });
   } catch (err) {
-    console.error("❌ 요청 실패 in gnerate-hwp:", err.message);
+    console.error("❌ 요청 실패 (예상 못한 에러):", err.message);
     res.status(500).json({
       success: false,
+      step: "unexpected",
       error: err.message,
     });
   }
@@ -1994,41 +2005,52 @@ router.get("/generate-hwp-license/:reportid", async (req, res) => {
   const { reportid } = req.params;
 
   try {
-    // TODO: DB 조회 or 매핑 로직 (여기서는 예시로 하드코딩)
-    // const imagePath1 = `/home/BackEnd/URIProcess/new_data/upload_sign/reportID-1294-imgfile-1755354291692-181712213.png`;
-    // const imagePath2 = `/home/BackEnd/URIProcess/new_data/upload_sign/reportID-1294-imgfile-1755354291692-181712213.png`;
+    let licenseData, imagePaths;
 
-    // const licenseData = {
-    //   qualificationType : "~~등급", 
-    //   registrationNumber : "124124",
-    //   licenseNumber : "01-123-123", 
-    //   issueDate : "2024-3-3",
-    //   name : "홍길동", 
-    //   residentNumber : "001234-12412414",
-    //   address : "대전시 서구 ~~", 
-    //   phone : "010-1234-5678", 
-    //   licenseType : "테스트타입", 
-    //   isreissue : false,
-    //   reissueReason : null
-    // }
-////////////////////////////////////////////////////////////////
-    const { licenseData, imagePaths } =
-      await dbModule.buildConstructionPayloadFromDB(reportid);
+    // 1) DB 조회 (Payload 생성)
+    try {
+      ({ licenseData, imagePaths } = await dbModule.buildConstructionPayloadFromDB(reportid));
+    } catch (err) {
+      console.error("❌ buildConstructionPayloadFromDB 실패:", err.message);
+      return res.status(500).json({
+        success: false,
+        error: err.message,
+      });
+    }
 
-    const file_name = `/new_data/upload/hwp/construction-license/report_construction-license-${reportid}.hwp`;
-    console.log("postAndDownloadHWPLicense call before", licenseData, imagePaths)
-    await postAndDownloadHWPLicense(imagePaths, licenseData, file_name);
+    const file_name = `/new_data/sw_excellent/upload/hwp/construction-license/report_construction-license-${reportid}.hwp`;
+    console.log("imagePaths : ", imagePaths)
+    // 2) HWP 생성 및 다운로드
+    try {
+      console.log("postAndDownloadHWPLicense call before", licenseData, imagePaths);
+      await postAndDownloadHWPLicense(imagePaths, licenseData, file_name);
+    } catch (err) {
+      console.error("❌ postAndDownloadHWPLicense 실패:", err.message);
+      return res.status(500).json({
+        success: false,
+        error: err.message,
+      });
+    }
 
-    // history를 위한 file_path 업데이트
-    await dbModule.updateReportFilePath(reportid, file_name)
+    // 3) DB에 파일 경로 업데이트
+    try {
+      await dbModule.updateReportFilePath(reportid, file_name);
+    } catch (err) {
+      console.error("❌ updateReportFilePath 실패:", err.message);
+      return res.status(500).json({
+        success: false,
+        error: err.message,
+      });
+    }
 
-    // 성공 응답
+    // ✅ 성공 응답
     res.json({
       success: true,
       message: `✅ HWP 파일 생성 완료: ${file_name}`,
       file: file_name,
     });
   } catch (err) {
+    // 최상위 catch (예상치 못한 예외)
     console.error("❌ 요청 실패 in generate-hwp-license:", err.message);
     res.status(500).json({
       success: false,
@@ -2036,6 +2058,7 @@ router.get("/generate-hwp-license/:reportid", async (req, res) => {
     });
   }
 });
+
 
 // POST /db/yangchun_insert_gov_ResultList
 router.post("/yangchun_insert_gov_ResultList", dbModule.authenticateToken, async (req, res) => {

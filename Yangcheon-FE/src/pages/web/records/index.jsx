@@ -224,45 +224,86 @@ const WorkRecords = () => {
             </S.DateRangeContainer>
 
             <S.SearchContainer>
-              <S.SearchDropdown ref={dropdownRef}>
-                <S.DropdownButton
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                >
-                  {getCategoryLabel()}
-                  <S.DropdownIcon $isOpen={isDropdownOpen}>▼</S.DropdownIcon>
-                </S.DropdownButton>
-                {isDropdownOpen && (
-                  <S.DropdownMenu>
-                    {searchCategories.map((c) => (
-                      <S.DropdownItem
-                        key={c.value}
-                        onClick={() => {
-                          setSearchCategory(c.value);
-                          setIsDropdownOpen(false);
-                          setSelectedTypes([]); // 다중 선택 초기화
-                          setCurrentPage(1);
-                        }}
-                      >
-                        {c.label}
-                      </S.DropdownItem>
-                    ))}
-                  </S.DropdownMenu>
-                )}
-              </S.SearchDropdown>
+              {/* 왼쪽: 검색 컨트롤 묶음 */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  flex: 1,
+                  minWidth: 420,
+                }}
+              >
+                <S.SearchDropdown ref={dropdownRef}>
+                  <S.DropdownButton
+                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  >
+                    {getCategoryLabel()}
+                    <S.DropdownIcon $isOpen={isDropdownOpen}>▼</S.DropdownIcon>
+                  </S.DropdownButton>
+                  {isDropdownOpen && (
+                    <S.DropdownMenu>
+                      {searchCategories.map((c) => (
+                        <S.DropdownItem
+                          key={c.value}
+                          onClick={() => {
+                            setSearchCategory(c.value);
+                            setIsDropdownOpen(false);
+                            setSelectedTypes([]);
+                            setCurrentPage(1);
+                          }}
+                        >
+                          {c.label}
+                        </S.DropdownItem>
+                      ))}
+                    </S.DropdownMenu>
+                  )}
+                </S.SearchDropdown>
 
-              <S.SearchInput
-                type="text"
-                placeholder="검색어"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-              />
-              <S.SearchIconButton onClick={handleSearch}>🔍</S.SearchIconButton>
-              <S.DownloadButton onClick={handleDownload}>
-                내려받기
-              </S.DownloadButton>
+                <S.SearchInput
+                  type="text"
+                  placeholder="검색어"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+                />
+                <S.SearchIconButton onClick={handleSearch}>
+                  🔍
+                </S.SearchIconButton>
+              </div>
             </S.SearchContainer>
           </S.FilterSection>
+          <S.DownloadBar>
+            <div
+              style={{
+                position: "relative",
+                display: "inline-flex",
+                alignItems: "flex-start",
+              }}
+            >
+              <S.DownloadButton
+                onClick={handleDownload}
+                title="선택한 항목의 첨부파일을 내려받습니다"
+                aria-label="선택 항목 내려받기"
+                disabled={selectedRecords.length === 0}
+              >
+                내려받기
+                {selectedRecords.length > 0
+                  ? ` (${selectedRecords.length})`
+                  : ""}
+              </S.DownloadButton>
+
+              {/* 버튼 우측 상단에 ? 아이콘 */}
+              <S.HelpWrap>
+                <S.HelpIcon tabIndex={0} aria-describedby="download-help">
+                  ?
+                </S.HelpIcon>
+                <S.HelpTooltip id="download-help" role="tooltip">
+                  체크박스로 선택한 파일을 한 번에 내려받을 수 있습니다
+                </S.HelpTooltip>
+              </S.HelpWrap>
+            </div>
+          </S.DownloadBar>
 
           {/* 로딩/에러 */}
           {loading ? (

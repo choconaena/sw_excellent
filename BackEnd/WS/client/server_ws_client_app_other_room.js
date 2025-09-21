@@ -1,7 +1,7 @@
 // for test DONOT SEND ANY DATA OTHER ROOM!!!!!!!!!!
 import { io } from "socket.io-client";
 
-const SERVER = process.env.WS_SERVER || "http://localhost:8086";
+const SERVER = process.env.WS_SERVER || "http://localhost:28086";
 
 const ROOM = process.env.ROOM || "test2@naver.com";
 const NICK = process.env.NICK || "app";

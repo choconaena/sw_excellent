@@ -29,7 +29,7 @@ def generate_with_ollama(prompt: str) -> str:
         return f"Error: {e.stderr.strip()}"
 
 def main():
-    file_path = "/home/BackEnd/AI/funcs/stt_AI/upload/transcript_119.149.165.5_56876_20250522_164005.txt"
+    file_path = "/new_data/sw_excellent/BackEnd/AI/funcs/stt_AI/upload/transcript_119.149.165.5_56876_20250522_164005.txt"
     # 1) 파일 읽기
     with open(file_path, encoding="utf-8") as f:
         content = f.read()

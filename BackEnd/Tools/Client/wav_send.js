@@ -7,14 +7,14 @@ async function uploadWavFile() {
     const form = new FormData();
 
     const reportid = 1;
-    const filePath = '/home/BackEnd/result.wav'; // 업로드할 .wav 파일 경로
+    const filePath = '/new_data/sw_excellent/BackEnd/result.wav'; // 업로드할 .wav 파일 경로
 
     // form-data 구성
     form.append('reportid', reportid);
     form.append('audiofile', fs.createReadStream(filePath));
 
     try {
-        const response = await axios.post('http://211.188.55.88:3000/db/uploadCallRecord', form, {
+        const response = await axios.post('http://211.188.55.88:23000/db/uploadCallRecord', form, {
             headers: form.getHeaders(),
             maxContentLength: Infinity,
             maxBodyLength: Infinity

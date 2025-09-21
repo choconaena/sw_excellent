@@ -16,7 +16,7 @@ class WavToTextConverter:
     WavToTextConverter 클래스를 이용해 WAV 파일을 텍스트로 변환.
     내부적으로 모델 및 프로세서를 로드하여, 음성을 텍스트로 변환 후 결과를 파일로 저장한다.
     """
-    def __init__(self, pkl_path="/home/BackEnd/AI/funcs/model/whisper_full_model.pkl", device="cuda" if torch.cuda.is_available() else "cpu"):
+    def __init__(self, pkl_path="/new_data/sw_excellent/BackEnd/AI/funcs/model/whisper_full_model.pkl", device="cuda" if torch.cuda.is_available() else "cpu"):
         """
         클래스 초기화 시 모델 및 프로세서를 자동으로 로드할 수 있도록 구현했다.
         Args:
@@ -149,7 +149,7 @@ def update_policy_in_db(user_id, policy_data):
     Returns:
         dict: API 응답 결과
     """
-    url = f"http://127.0.0.1:3000/db/welfare-datas/{user_id}"
+    url = f"http://127.0.0.1:23000/db/welfare-datas/{user_id}"
     headers = {"Content-Type": "application/json"}
     
     # 요청 데이터 구성
@@ -173,7 +173,7 @@ def get_welfare_policies():
     Returns:
         dict or None: JSON response if successful, None otherwise.
     """
-    url = "http://127.0.0.1:3000/db/welfare-policies"
+    url = "http://127.0.0.1:23000/db/welfare-policies"
 
     try:
         response = requests.get(url)
@@ -231,7 +231,7 @@ def find_top_matching_policies(search_text, json_data, top_n=3):
 
 def recommend_policy(user_query, top_k=3):
     model = SentenceTransformer("upskyy/bge-m3-korean")
-    json_file = "/home/BackEnd/AI/funcs/python/policy_embeddings.json"
+    json_file = "/new_data/sw_excellent/BackEnd/AI/funcs/python/policy_embeddings.json"
 
     with open(json_file, "r", encoding="utf-8") as f:
         policy_data = json.load(f)

@@ -31,6 +31,7 @@ export const MainContent = styled.main`
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
+  min-height: 0;
 
   ${(props) =>
     props.$isDefaultFlow
@@ -43,7 +44,7 @@ export const MainContent = styled.main`
     display: grid;
     grid-template-columns: 1fr 1fr; /* Default for chat + steps */
     gap: 2rem;
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
       grid-template-columns: 1fr;
     }
   `}

@@ -3,7 +3,7 @@ const axios = require('axios');
 const bodyParser = require('body-parser');
 
 const app = express();
-const PORT = 3000;
+const PORT = 23000;
 const HOST = "localhost"
 
 app.use(bodyParser.json()); // JSON 형식의 요청을 파싱

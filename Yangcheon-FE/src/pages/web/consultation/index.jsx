@@ -1,15 +1,16 @@
 import { useEffect, useState, useRef } from "react";
 import MainLayout from "../../../layouts/MainLayout";
-import ChatPanel from "../../../components/consultation/ChatPanel";
-import IdentityRequest from "../../../components/consultation/IdentityRequest";
-import ApplicantForm from "../../../components/consultation/ApplicantForm";
-import SummaryStep from "../../../components/consultation/SummaryStep";
-import EnhancedSummaryStep from "../../../components/consultation/EnhancedSummaryStep";
-import FeeExemptionStep from "../../../components/consultation/FeeExemptionStep";
-import DisclosureMethodStep from "../../../components/consultation/DisclosureMethodStep";
-import SignatureStep from "../../../components/consultation/SignatureStep";
+import ChatPanel from "./components/consultation/ChatPanel";
+import IdentityRequest from "./components/consultation/IdentityRequest";
+import ApplicantForm from "./components/consultation/ApplicantForm";
+import SummaryStep from "./components/consultation/SummaryStep";
+import EnhancedSummaryStep from "./components/consultation/EnhancedSummaryStep";
+import FeeExemptionStep from "./components/consultation/FeeExemptionStep";
+import DisclosureMethodStep from "./components/consultation/DisclosureMethodStep";
+import SignatureStep from "./components/consultation/SignatureStep";
 import { useConsultationFlow } from "../../../hooks/useConsultationFlow";
 import { useSttSession } from "../../../hooks/useSttSession";
+import { useReliableRoomBus } from "../../../ws/reliable/useReliableRoomBus";
 import {
   submitApplicantData,
   submitFinalReportWeb,

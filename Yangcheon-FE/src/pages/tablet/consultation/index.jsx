@@ -19,7 +19,7 @@ const TabletConsultation = () => {
   const [messages, setMessages] = useState([]);
   const [summaryData] = useState(null);
 
-  // 동의 상태(필요 시 웹으로도 전달 가능)
+  // 동의 상태(필요 시 웹으로도 전달 가능) consentCollection 지우면 오류 뜸. 지우지 말기
   const [consentCollection, setConsentCollection] = useState(null); // true/false
 
   useEffect(() => {

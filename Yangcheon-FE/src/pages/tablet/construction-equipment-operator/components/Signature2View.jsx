@@ -26,7 +26,7 @@ const Signature2View = ({ onComplete }) => {
   const [submitted, setSubmitted] = useState(false);
 
   const [previewUrl, setPreviewUrl] = useState("");
-  const [previewSize, setPreviewSize] = useState(0);
+  //const [previewSize, setPreviewSize] = useState(0);
 
   const color = "#000";
   const baseWidth = 2.2;
@@ -139,7 +139,7 @@ const Signature2View = ({ onComplete }) => {
     if (previewUrl) {
       URL.revokeObjectURL(previewUrl);
       setPreviewUrl("");
-      setPreviewSize(0);
+      //setPreviewSize(0);
     }
   };
 
@@ -180,7 +180,7 @@ const Signature2View = ({ onComplete }) => {
       if (previewUrl) URL.revokeObjectURL(previewUrl);
       const url = URL.createObjectURL(blob);
       setPreviewUrl(url);
-      setPreviewSize(blob.size);
+      //setPreviewSize(blob.size);
 
       // 서버 업로드 (num=2)
       const result = await submitConstructionSignature({
@@ -246,7 +246,7 @@ const Signature2View = ({ onComplete }) => {
         />
       </S.SignatureArea>
 
-      {previewUrl && (
+      {/* {previewUrl && (
         <div
           style={{
             display: "flex",
@@ -291,7 +291,7 @@ const Signature2View = ({ onComplete }) => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
 
       {!submitted && (
         <S.Toolbar>

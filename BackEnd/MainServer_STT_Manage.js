@@ -1,5 +1,5 @@
-// pm2 start python3 --name STT_AI -- -u /home/BackEnd/AI/funcs/stt_AI/server.py
-// pm2 start /home/BackEnd/MainServer_STT_Manage.js --name STT-manage-server
+// pm2 start python3 --name STT_AI -- -u /new_data/sw_excellent/BackEnd/AI/funcs/stt_AI/server.py
+// pm2 start /new_data/sw_excellent/BackEnd/MainServer_STT_Manage.js --name STT-manage-server
 
 const express = require('express');
 const http = require('http');
@@ -83,6 +83,6 @@ app.get('/pm2-restart', (req, res) => {
 });
 
 // 서버 실행
-server.listen(3030, () => {
-    console.log('🚀 Server listening on http://localhost:3030');
+server.listen(23030, () => {
+    console.log('🚀 Server listening on http://localhost:23030');
 });

@@ -1,7 +1,7 @@
 const WebSocket = require('ws');
 const mic = require('mic');
 
-const ws = new WebSocket('ws://localhost:8085');
+const ws = new WebSocket('ws://localhost:28085');
 
 ws.on('open', () => {
   console.log('서버에 연결됨');

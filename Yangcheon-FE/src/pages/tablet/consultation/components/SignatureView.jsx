@@ -89,7 +89,7 @@ const SignatureView = ({ onComplete }) => {
   const [submitted, setSubmitted] = useState(false); // ✅ 업로드 완료 상태
 
   const [previewUrl, setPreviewUrl] = useState("");
-  const [previewSize, setPreviewSize] = useState(0);
+  //const [previewSize, setPreviewSize] = useState(0);
 
   const color = "#000";
   const baseWidth = 2.2;
@@ -198,7 +198,7 @@ const SignatureView = ({ onComplete }) => {
     if (previewUrl) {
       URL.revokeObjectURL(previewUrl);
       setPreviewUrl("");
-      setPreviewSize(0);
+      //setPreviewSize(0);
     }
   };
 
@@ -239,7 +239,7 @@ const SignatureView = ({ onComplete }) => {
       if (previewUrl) URL.revokeObjectURL(previewUrl);
       const url = URL.createObjectURL(blob);
       setPreviewUrl(url);
-      setPreviewSize(blob.size);
+      //setPreviewSize(blob.size);
 
       const result = await submitAppSignature({ reportId, blob });
 
@@ -304,7 +304,7 @@ const SignatureView = ({ onComplete }) => {
         />
       </S.SignatureArea>
 
-      {previewUrl && (
+      {/* {previewUrl && (
         <PreviewPanel>
           <PreviewImg src={previewUrl} alt="서명 미리보기" />
           <Meta>
@@ -326,7 +326,7 @@ const SignatureView = ({ onComplete }) => {
             </div>
           </Meta>
         </PreviewPanel>
-      )}
+      )} */}
 
       {/* ✅ 업로드 완료 후 툴바 숨김 */}
       {!submitted && (

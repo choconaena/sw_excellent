@@ -95,6 +95,9 @@ const ApplicationFormStep = ({ formData, onInputChange, onNext }) => {
     pushPatch(field, value);
   };
 
+  const isEmpty = (v) =>
+    v == null || (typeof v === "string" && v.trim() === "");
+
   const validateRequiredFields = () => {
     const requiredFields = [
       { key: "qualificationType", label: "국가기술자격 종목 및 등급" },
@@ -107,8 +110,20 @@ const ApplicationFormStep = ({ formData, onInputChange, onNext }) => {
       { key: "address", label: "주소" },
       { key: "phone", label: "전화번호" },
     ];
+
     for (const f of requiredFields) {
-      if (!formData[f.key] || String(formData[f.key]).trim() === "") {
+      if (f.key === "gender") {
+        const g = formData.gender;
+        const valid = g === 0 || g === 1 || g === "0" || g === "1";
+        if (!valid) {
+          setValidationMessage(`${f.label}은(는) 필수 입력 항목입니다.`);
+          setShowValidationModal(true);
+          return false;
+        }
+        continue;
+      }
+
+      if (isEmpty(formData[f.key])) {
         setValidationMessage(`${f.label}은(는) 필수 입력 항목입니다.`);
         setShowValidationModal(true);
         return false;
@@ -272,16 +287,17 @@ const ApplicationFormStep = ({ formData, onInputChange, onNext }) => {
                   <S.RadioInput
                     type="radio"
                     name="gender"
-                    checked={Number(formData.gender) === 0}
+                    checked={formData.gender === 0 || formData.gender === "0"}
                     onChange={() => handleRadioChange("gender", 0)}
                   />
                   <S.RadioLabel>남</S.RadioLabel>
                 </S.RadioOption>
+
                 <S.RadioOption onClick={() => handleRadioChange("gender", 1)}>
                   <S.RadioInput
                     type="radio"
                     name="gender"
-                    checked={Number(formData.gender) === 1}
+                    checked={formData.gender === 1 || formData.gender === "1"}
                     onChange={() => handleRadioChange("gender", 1)}
                   />
                   <S.RadioLabel>여</S.RadioLabel>

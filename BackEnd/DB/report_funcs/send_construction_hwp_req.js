@@ -4,7 +4,7 @@ import path from "path";
 import fetch from "node-fetch"; // Node 18+ 이상이면 필요 없음
 import FormData from "form-data"; // npm install form-data
 
-const ENDPOINT = "http://127.0.0.1:8090/"; // 필요 시 경로 변경
+const ENDPOINT = "http://127.0.0.1:28090/"; // 필요 시 경로 변경
 
 /**
  * HWP 요청 후 다운로드 (건설기계조종사면허증 발급/재발급)
@@ -27,8 +27,8 @@ export async function postAndDownloadHWPLicense(imagePaths, licenseData, file_na
   console.log("imagePath1 : ", imagePaths.imagePath1)
   console.log("imagePath2 : ", imagePaths.imagePath2)
   
-  // imagePath1: '/home/BackEnd/URIProcess/new_data/upload_sign/reportID-1375-imgfile-1755361200123-101010101.png',
-  // imagePath2: '/home/BackEnd/URIProcess/new_data/upload_sign/reportID-1375-imgfile-1755361203456-202020202.png'
+  // imagePath1: '/new_data/sw_excellent/BackEnd/URIProcess/new_data/sw_excellent/upload_sign/reportID-1375-imgfile-1755361200123-101010101.png',
+  // imagePath2: '/new_data/sw_excellent/BackEnd/URIProcess/new_data/sw_excellent/upload_sign/reportID-1375-imgfile-1755361203456-202020202.png'
   // ---- 이미지 첨부 (최대 2장) ----
   const { imagePath1, imagePath2 } = Array.isArray(imagePaths)
     ? { imagePath1: imagePath1, imagePath2: imagePath2 }

@@ -138,7 +138,7 @@ async function getReport(reportid) {
     }
 
     try {
-        const filePath = "/home/BackEnd/DB/funcs/report_1_2025-04-03-10-00.docx";
+        const filePath = "/new_data/sw_excellent/BackEnd/DB/funcs/report_1_2025-04-03-10-00.docx";
 
         // 존재 확인
         await fsPromises.access(filePath);
@@ -1688,7 +1688,7 @@ function extractJsonFromMarkdown(raw) {
  * @returns {Promise<string>}
  */
 async function callOllama(prompt) {
-  const resp = await axios.post('http://localhost:11434/api/generate', {
+  const resp = await axios.post('http://localhost:31434/api/generate', {
     model: 'gemma3:4b',
     prompt,
     max_tokens: 800,      // 필요에 따라 조정
@@ -2147,7 +2147,7 @@ async function buildPayloadFromDB(reportid) {
   console.log("buildPayload start!!!!!!!!!");
   // 1) 신청인 정보 applicant_info
   const [appRows] = await pool.query(
-    `SELECT name, birth_date, address, passport, phone, email, fax, business_number
+    `SELECT name, birth_date, address, passport, gender, phone, email, fax, business_number
         FROM applicant_info
       WHERE reportid = ?
       LIMIT 1`,
@@ -2158,12 +2158,12 @@ async function buildPayloadFromDB(reportid) {
     name: nz(app.name),
     birthDate: nz(app.birth_date),             // 서버에서 요구하는 포맷으로 이미 저장돼 있다고 가정
     address: nz(app.address),
+    gender: nz(app.gender),
     passport: nz(app.passport),
     phone: nz(app.phone),
     email: nz(app.email),
     fax: nz(app.fax),
     businessNumber: nz(app.business_number),
-    gender: "",                                // 스키마에 없으니 공란
   };
 
   console.log("applicantData : ", applicantData)
@@ -2183,7 +2183,7 @@ async function buildPayloadFromDB(reportid) {
   //   (vc.detail_text && vc.detail_text.trim()) ||
   //   (vc.category_title ? `[${vc.category_title}] report ${reportid}` : `Report ${reportid}`);
 
-  const contentText = vc.detail_text || "";
+  const contentText = vc.detail_text || "요약 내용이 없습니다.";
   const summaryData = {
     content: contentText,
     isPublic: true, // 필요 시 테이블 확장
@@ -2241,7 +2241,7 @@ async function buildPayloadFromDB(reportid) {
     [reportid]
   );
   const si = siRows[0];
-  const imagePath = si?.img_path || null;
+  const imagePath = si?.img_path || '/new_data/sw_excellent/upload_sign/default_sign.png';
 
   console.log("imagePath from buildPayloadFromDB : ", imagePath)
 
@@ -2358,6 +2358,7 @@ async function buildConstructionPayloadFromDB(reportid) {
       licenseNumber: row.license_number || null,
       issueDate: row.issue_date || null,
       name: row.name || null,
+      gender: row.gender || null,
       residentNumber: row.resident_number || null,
       address: row.address || null,
       phone: row.phone || null,
@@ -2381,11 +2382,11 @@ async function buildConstructionPayloadFromDB(reportid) {
     let imagePaths = null;
 
     if (siRows.length === 1) {
-      imagePaths = siRows[0].img_path;
+      imagePaths = siRows[0].img_path || '/new_data/sw_excellent/upload_sign/default_sign.png';
     } else if (siRows.length >= 2) {
       imagePaths = {
-        imagePath1: siRows[0].img_path,
-        imagePath2: siRows[1].img_path,
+        imagePath1: siRows[0].img_path || '/new_data/sw_excellent/upload_sign/default_sign.png',
+        imagePath2: siRows[1].img_path || '/new_data/sw_excellent/upload_sign/default_sign.png',
       };
     }
 

@@ -13,7 +13,7 @@ async function uploadWavFile(filePath) {
     form.append('audio', fs.createReadStream(filePath));
 
     // 파일 전송 요청
-    const response = await axios.post('http://127.0.0.1:3000/upload', form, {
+    const response = await axios.post('http://127.0.0.1:23000/upload', form, {
       headers: {
         ...form.getHeaders(),
       },

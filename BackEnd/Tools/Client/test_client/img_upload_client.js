@@ -20,7 +20,7 @@ async function uploadImagesWithReportId() {
 
   try {
     const response = await axios.post(
-      'http://localhost:3000/db/uploadImages',
+      'http://localhost:23000/db/uploadImages',
       form,
       { headers: form.getHeaders() }
     );

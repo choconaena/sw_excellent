@@ -1,7 +1,7 @@
 const WebSocket = require('ws');
 
 // 서버 주소
-const ws = new WebSocket('ws://localhost:8085');
+const ws = new WebSocket('ws://localhost:28085');
 
 ws.on('open', () => {
   console.log('✅ Connected to WebSocket server');

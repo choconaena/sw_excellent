@@ -5,7 +5,7 @@ import fetch from "node-fetch"; // Node 18+에서는 불필요
 import FormData from "form-data"; // npm install form-data
 
 // Node 18+ 또는 브라우저 모두 동작 (Node 16 이하는 node-fetch 필요)
-const ENDPOINT = "http://127.0.0.1:8090/"; // 필요 시 경로 변경 예: "/api/information_open"
+const ENDPOINT = "http://127.0.0.1:28090/"; // 필요 시 경로 변경 예: "/api/information_open"
 
 const payload = {
   reportType: "information_open",
@@ -40,7 +40,7 @@ const payload = {
 };
 
 // 이미지 경로
-const imagePath = "/home/BackEnd/uploads/wav/reportID-501-imgfile-1755012875902-964112609.png";
+const imagePath = "/new_data/sw_excellent/BackEnd/uploads/wav/reportID-501-imgfile-1755012875902-964112609.png";
 
 async function postAndDownloadHWP() {
   const formData = new FormData();

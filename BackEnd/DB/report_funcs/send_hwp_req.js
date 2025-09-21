@@ -4,7 +4,7 @@ import path from "path";
 import fetch from "node-fetch"; // Node 18+ 이상이면 필요 없음
 import FormData from "form-data"; // npm install form-data
 
-const ENDPOINT = "http://127.0.0.1:8090/"; // 필요 시 경로 변경
+const ENDPOINT = "http://127.0.0.1:28090/"; // 필요 시 경로 변경
 
 /**
  * HWP 요청 후 다운로드

@@ -13,10 +13,10 @@ def abstractEmbedding(summary_path, stt_id):
 
     summary_text = summary_data.get("summary", "")
     if not summary_text:
-        raise ValueError("요약된 STT 내용이 비어 있습니다. 파일 확인 필요.")
+        raise ValueError("요약된 STT 내용이 비어 있습니다. 파일 확인 필요!!!")
 
     # (3) Flask 서버에 POST 요청
-    res = requests.post("http://localhost:5005/embed", json={"summary": summary_text})
+    res = requests.post("http://localhost:25005/embed", json={"summary": summary_text})
     res_data = res.json()
 
     if "embedding" not in res_data:

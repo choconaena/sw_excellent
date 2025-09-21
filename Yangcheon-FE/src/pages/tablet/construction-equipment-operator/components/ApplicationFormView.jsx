@@ -19,7 +19,7 @@ const ApplicationFormView = () => {
   const [formData, setFormData] = useState({
     isreissue: "", // ✅ "issue" / "reissue" 로 통일
     name: "",
-    gender: "",
+    gender: null,
     residentNumber: "",
     address: "",
     phone: "",
@@ -130,22 +130,26 @@ const ApplicationFormView = () => {
               <S.RadioInput
                 type="radio"
                 name="gender"
-                checked={formData.gender === 1}
+                value={0}
+                checked={formData.gender === 0}
                 onChange={() => handleInputChange("gender", 0)}
               />
               <S.RadioLabel>남</S.RadioLabel>
             </S.RadioOption>
+
             <S.RadioOption onClick={() => handleInputChange("gender", 1)}>
               <S.RadioInput
                 type="radio"
                 name="gender"
-                checked={Number(formData.gender) === 1}
+                value={1}
+                checked={formData.gender === 1}
                 onChange={() => handleInputChange("gender", 1)}
               />
               <S.RadioLabel>여</S.RadioLabel>
             </S.RadioOption>
           </S.RadioGroup>
         </S.FormField>
+
         <S.FormField>
           <S.FieldLabel>
             <S.RequiredMark>*</S.RequiredMark>주민등록번호(외국인등록번호)

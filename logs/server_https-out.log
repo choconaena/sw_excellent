@@ -1,0 +1,76 @@
+서버가 wss://0.0.0.0:28084 대기중...
+클라이언트 등록됨: 1.214.89.64_13727
+[1.214.89.64_13727] 연결 메타데이터 수신: reportid=2030, email=jun@test.com
+[INFO] Loading Whisper model from '/model/my_whisper' on cuda
+[1.214.89.64_13727] STT 모델 로드 완료 메시지 전송
+txt_file :  /new_data/sw_excellent/upload3/transcript_1.214.89.64_13727_20250921_123916.txt
+[1.214.89.64_13727] STT 업데이트 응답: 200 {'status': True, 'msg': 'STT 경로가 성공적으로 업데이트되었습니다. 2030'}
+[SEND to 1.214.89.64_13727] 어. 파스타면
+txt_file in server:  /new_data/sw_excellent/upload3/transcript_1.214.89.64_13727_20250921_123916.txt
+클라이언트 등록됨: 1.214.89.64_59233
+[1.214.89.64_59233] 연결 메타데이터 수신: reportid=2032, email=jun@test.com
+[INFO] Loading Whisper model from '/model/my_whisper' on cuda
+클라이언트 등록됨: 1.214.89.64_59242
+[1.214.89.64_59242] 연결 메타데이터 수신: reportid=2033, email=jun@test.com
+[INFO] Loading Whisper model from '/model/my_whisper' on cuda
+[1.214.89.64_13727] AI 요약 응답: 500 {'error': 'Database update failed'}
+클라이언트 해제됨: 1.214.89.64_13727
+클라이언트 등록됨: 1.214.89.64_59247
+[1.214.89.64_59247] 연결 메타데이터 수신: reportid=2035, email=jun@test.com
+[INFO] Loading Whisper model from '/model/my_whisper' on cuda
+[1.214.89.64_59247] STT 모델 로드 완료 메시지 전송
+txt_file :  /new_data/sw_excellent/upload3/transcript_1.214.89.64_59247_20250921_124539.txt
+[1.214.89.64_59247] STT 업데이트 응답: 200 {'status': True, 'msg': 'STT 경로가 성공적으로 업데이트되었습니다. 2035'}
+txt_file in server:  /new_data/sw_excellent/upload3/transcript_1.214.89.64_59247_20250921_124539.txt
+클라이언트 등록됨: 1.214.89.64_14697
+[1.214.89.64_14697] 연결 메타데이터 수신: reportid=2037, email=jun@test.com
+[INFO] Loading Whisper model from '/model/my_whisper' on cuda
+[1.214.89.64_14697] STT 모델 로드 완료 메시지 전송
+txt_file :  /new_data/sw_excellent/upload3/transcript_1.214.89.64_14697_20250921_124631.txt
+[1.214.89.64_14697] STT 업데이트 응답: 200 {'status': True, 'msg': 'STT 경로가 성공적으로 업데이트되었습니다. 2037'}
+[1.214.89.64_59247] AI 요약 응답: 200 {'message': 'VisitCategory updated', 'result': {'success': True, 'updated': 1}}
+클라이언트 해제됨: 1.214.89.64_59247
+[SEND to 1.214.89.64_14697] 안녕하세요. 지금 STT를 연결하는 테스트를 진행 중에 있습니다.
+[SEND to 1.214.89.64_14697] 같이 시작해 보겠습니다.
+[SEND to 1.214.89.64_14697] 상능 되기 전에 있어. 설명을 받아볼 거 같습니다. 모두 동일하고, 완료
+[SEND to 1.214.89.64_14697] 뭘 해볼게요.
+[SEND to 1.214.89.64_14697] 나
+[SEND to 1.214.89.64_14697] 연주를 하고
+[SEND to 1.214.89.64_14697] 끝
+[SEND to 1.214.89.64_14697] 끝
+[SEND to 1.214.89.64_14697] 음
+[SEND to 1.214.89.64_14697] 끝
+[SEND to 1.214.89.64_14697] 끄
+[SEND to 1.214.89.64_14697] 끝
+[SEND to 1.214.89.64_14697] 오
+[SEND to 1.214.89.64_14697] 끄
+[SEND to 1.214.89.64_14697] 끝
+[SEND to 1.214.89.64_14697] 나이스
+[SEND to 1.214.89.64_14697] 나는 지는
+[SEND to 1.214.89.64_14697] 나는
+[SEND to 1.214.89.64_14697] 끄
+[SEND to 1.214.89.64_14697] 그냥 걸 잘 되실까.
+[SEND to 1.214.89.64_14697] 끝
+[SEND to 1.214.89.64_14697] 지
+txt_file in server:  /new_data/sw_excellent/upload3/transcript_1.214.89.64_14697_20250921_124631.txt
+[1.214.89.64_14697] AI 요약 응답: 200 {'message': 'VisitCategory updated', 'result': {'success': True, 'updated': 1}}
+클라이언트 해제됨: 1.214.89.64_14697
+클라이언트 등록됨: 1.214.89.64_59324
+[1.214.89.64_59324] 연결 메타데이터 수신: reportid=2038, email=jun@test.com
+[INFO] Loading Whisper model from '/model/my_whisper' on cuda
+[1.214.89.64_59324] STT 모델 로드 완료 메시지 전송
+txt_file :  /new_data/sw_excellent/upload3/transcript_1.214.89.64_59324_20250921_125149.txt
+[1.214.89.64_59324] STT 업데이트 응답: 200 {'status': True, 'msg': 'STT 경로가 성공적으로 업데이트되었습니다. 2038'}
+[SEND to 1.214.89.64_59324] 끄
+[SEND to 1.214.89.64_59324] 가자고?
+[SEND to 1.214.89.64_59324] 끝
+[SEND to 1.214.89.64_59324] 그런 걸 보내준다고.
+[SEND to 1.214.89.64_59324] 그럴 뻔 지금
+[SEND to 1.214.89.64_59324] 어떤 거 보내준다고, 어떤 거 보내준다고, 둘이 다른 걸 말해준다고.
+[SEND to 1.214.89.64_59324] 끄
+[SEND to 1.214.89.64_59324] 그래. 너네 둘이 말하는 게 달라. 괜찮아. 그거 신경 내가 안 써.
+[SEND to 1.214.89.64_59324] 끝
+[SEND to 1.214.89.64_59324] 지
+txt_file in server:  /new_data/sw_excellent/upload3/transcript_1.214.89.64_59324_20250921_125149.txt
+[1.214.89.64_59324] AI 요약 응답: 200 {'message': 'VisitCategory updated', 'result': {'success': True, 'updated': 1}}
+클라이언트 해제됨: 1.214.89.64_59324

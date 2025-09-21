@@ -4,7 +4,7 @@ from model import SummaryModel
 app = Flask(__name__)
 
 # 모델 초기화
-summary_model = SummaryModel(weight_path="/home/BackEnd/AI/funcs/summary_AI/weights/summary weight.ckpt")
+summary_model = SummaryModel(weight_path="/new_data/sw_excellent/BackEnd/AI/funcs/summary_AI/weights/summary weight.ckpt")
 
 @app.route("/summarize", methods=["POST"])
 def summarize():

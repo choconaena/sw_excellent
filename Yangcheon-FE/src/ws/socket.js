@@ -3,7 +3,7 @@ import { io } from "socket.io-client";
 
 // page_move, data
 const WS_SERVER =
-  import.meta.env.VITE_WS_SERVER || "https://yangcheon.ai.kr:8087";
+  import.meta.env.VITE_WS_SERVER || "https://yangcheon.ai.kr:28087";
 
 let socket = null;
 let listenersBound = false;

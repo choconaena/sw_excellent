@@ -8,11 +8,11 @@
 
 # 4.17 STT_AI Management server
 ```
-pm2 start python3 --name STT_AI -- -u /home/BackEnd/AI/funcs/stt_AI/server.py
-pm2 start /home/BackEnd/MainServer_STT_Manage.js --name STT-manage-server
+pm2 start python3 --name STT_AI -- -u /new_data/sw_excellent/BackEnd/AI/funcs/stt_AI/server.py
+pm2 start /new_data/sw_excellent/BackEnd/MainServer_STT_Manage.js --name STT-manage-server
 // 이후 아래 링크 접속
 ```
-http://211.188.55.88:3030/
+http://211.188.55.88:23030/
 
 ## MainServer.js Dependency
 ``` bash
@@ -163,7 +163,7 @@ Uniform Resource Identifier)](https://en.wikipedia.org/wiki/Uniform_Resource_Ide
 2-1. **직접 URI 보내 테스트**
    - MainServer.js를 실행한 기기에서 아래와 같이 브라우저에서 직접 URI를 호출해 기능을 테스트할 수 있습니다.
    ```
-        http://127.0.0.1:3000/ai/runlocalfunc
+        http://127.0.0.1:23000/ai/runlocalfunc
    ```
 ![image](https://github.com/user-attachments/assets/6a125d97-ed9f-4092-9b26-fc10fb394dbe)
 
@@ -179,13 +179,13 @@ Uniform Resource Identifier)](https://en.wikipedia.org/wiki/Uniform_Resource_Ide
 (25.2.6) uploads/ 의 wav 파일이 잘못된 형식으로 uploads 되는경우 ffmpeq을 이용한 보정
 1. FFmpeg를 사용하여 파일이 정상적인 오디오 파일인지 확인
 ```bash
-ffmpeg -i /home/BackEnd/uploads/1738817342831.wav
+ffmpeg -i /new_data/sw_excellent/BackEnd/uploads/1738817342831.wav
 ```
 만약 오류가 발생하면, 해당 파일이 손상되었거나 올바른 WAV 파일이 아님.
 
 2. FFmpeg로 올바른 WAV 파일로 변환
 ```bash
-ffmpeg -i /home/BackEnd/uploads/1738817342831.wav -acodec pcm_s16le -ar 16000 -ac 1 /home/BackEnd/uploads/fixed_au
+ffmpeg -i /new_data/sw_excellent/BackEnd/uploads/1738817342831.wav -acodec pcm_s16le -ar 16000 -ac 1 /new_data/sw_excellent/BackEnd/uploads/fixed_au
 ```
 
 # start_service.sh

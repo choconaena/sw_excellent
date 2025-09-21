@@ -8,7 +8,7 @@ const fs = require('fs');
 const { spawn } = require('child_process');
 
 const app = express();
-const port = 3000;
+const port = 23000;
 require('dotenv').config();
 
 // CORS 미들웨어 사용 (모든 출처에 대해 허용)
@@ -43,10 +43,10 @@ const options = {
   cert: fs.readFileSync('./keys/fullchain.pem')
 };
 
-// HTTPS 서버 실행 (포트 443)
+// HTTPS 서버 실행 (포트 20443)
 https.createServer(options, app)
-  .listen(443, () => {
-    console.log('HTTPS server is running on port 443');
+  .listen(20443, () => {
+    console.log('HTTPS server is running on port 20443');
   });
 
 // (선택) HTTP 요청을 HTTPS로 강제 리다이렉트
@@ -54,7 +54,7 @@ const http = require('http');
 http.createServer((req, res) => {
   res.writeHead(301, { Location: 'https://' + req.headers.host + req.url });
   res.end();
-}).listen(80);
+}).listen(20080);
 
 
 ///////////////// Client Connection ////////////
@@ -96,7 +96,7 @@ const storage = multer.diskStorage({
 
 // AI 요약 모듈
 // 4.11 요약 모듈은 ollama로 대체
-// embedding_model_path = '/home/BackEnd/AI/funcs/llm/server_abstract_embedding.py'
+// embedding_model_path = '/new_data/sw_excellent/BackEnd/AI/funcs/llm/server_abstract_embedding.py'
 // stt_model_path = 'websocket_vosk_server.py'
 
 // const pythonEmbeddingModel = spawn('python3', [embedding_model_path]);

@@ -10,11 +10,11 @@ import { Server } from "socket.io";
 const app = express();
 app.use(cors());
 
-const PORT = 8087;  // 포트도 하드코딩
+const PORT = 28087;  // 포트도 하드코딩
 // --- TLS 인증서 하드코딩 ---
 const tlsOptions = {
-  key: fs.readFileSync("/new_data/Yangcheon-FE/certbot-etc/live/yangcheon.ai.kr/privkey.pem"),
-  cert: fs.readFileSync("/new_data/Yangcheon-FE/certbot-etc/live/yangcheon.ai.kr/fullchain.pem"),
+  key: fs.readFileSync("/new_data/sw_excellent/Yangcheon-FE/certbot-etc/live/yangcheon.ai.kr/privkey.pem"),
+  cert: fs.readFileSync("/new_data/sw_excellent/Yangcheon-FE/certbot-etc/live/yangcheon.ai.kr/fullchain.pem"),
   // 필요하다면 체인 인증서도 추가
   // ca: fs.readFileSync("/etc/letsencrypt/live/your.domain/chain.pem"),
 };
@@ -63,6 +63,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("room:message", ({ room, msg }) => {
+    console.log(`[msg] ${socket.id} @${room}: ${msg}`);
     const payload = {
       room,
       from: socket.id,

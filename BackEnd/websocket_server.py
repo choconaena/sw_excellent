@@ -30,8 +30,8 @@ async def handle_client(websocket, path=None):
         wf.close()  # 파일을 닫아 WAV 파일을 정상적으로 마무리
 
 async def main():
-    async with websockets.serve(handle_client, "0.0.0.0", 3000):
-        print("서버가 ws://localhost:3000 에서 대기중...")
+    async with websockets.serve(handle_client, "0.0.0.0", 23000):
+        print("서버가 ws://localhost:23000 에서 대기중...")
         await asyncio.Future()  # 서버가 계속 실행되도록 무한 대기
 
 if __name__ == "__main__":

@@ -3,7 +3,7 @@ import WebSocket from "ws";
 import fs from "fs";
 
 // 서버 주소
-const WS_URL = "wss://safe-hi.xyz:8084"; // self-signed면 rejectUnauthorized: false 필요
+const WS_URL = "wss://safe-hi.xyz:28084"; // self-signed면 rejectUnauthorized: false 필요
 
 // WebSocket 생성
 const ws = new WebSocket(WS_URL, {

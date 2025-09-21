@@ -12,7 +12,7 @@ async function registerUser() {
     };
 
     try {
-        const response = await axios.post('http://211.188.55.88:3000/db/register', registerData);
+        const response = await axios.post('http://211.188.55.88:23000/db/register', registerData);
         console.log('Register Success:', response.data);
     } catch (error) {
         console.error('Register Error:', error.response ? error.response.data : error.message);

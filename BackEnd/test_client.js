@@ -1,7 +1,7 @@
 // client-axios.js
 import axios from "axios";
 
-const BASE_URL = "https://safe-hi.xyz";
+const BASE_URL = "https://safe-hi.xyz:20443";
 
 async function sendLicenseInfo() {
   const payload = {
