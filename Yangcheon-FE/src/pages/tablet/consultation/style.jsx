@@ -423,3 +423,21 @@ export const CompletionValue = styled.div`
   color: #333;
   font-weight: 600;
 `;
+
+export const LoadingContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #fff;
+  padding: 3rem;
+`;
+
+export const LoadingText = styled.div`
+  font-size: 1.8rem;
+  color: #666;
+  font-weight: 600;
+  text-align: center;
+  animation: ${pulse} 1.5s ease-in-out infinite;
+`;

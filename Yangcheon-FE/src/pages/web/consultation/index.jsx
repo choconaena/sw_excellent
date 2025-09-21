@@ -36,12 +36,12 @@ const ALLOWED_FIELDS = [
 ];
 
 const TABLET_DEST_BY_NEXT_STEP = {
-  1: "/tablet/consultation?view=form&step=applicant",
+  1: "https://yangcheon.ai.kr:28443/tablet/consultation?view=form&step=applicant",
   2: null,
-  3: "/tablet/consultation?view=form&step=summary",
-  4: "/tablet/consultation?view=form&step=method",
+  3: "https://yangcheon.ai.kr:28443/tablet/consultation?view=form&step=summary",
+  4: "https://yangcheon.ai.kr:28443/tablet/consultation?view=form&step=method",
   5: null,
-  6: "/tablet/consultation?view=form&step=signature",
+  6: "https://yangcheon.ai.kr:28443/tablet/consultation?view=form&step=signature",
   7: null,
 };
 

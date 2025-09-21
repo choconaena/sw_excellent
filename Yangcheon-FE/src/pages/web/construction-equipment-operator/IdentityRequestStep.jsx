@@ -18,7 +18,7 @@ const IdentityRequestStep = ({ onNext }) => {
   const { send } = useRoomBus(room, {}, { tag: "identity-web" });
 
   const goTablet = () => {
-    const dst = "/tablet/construction-equipment-operator?step=1";
+    const dst = "https://yangcheon.ai.kr:28443/tablet/construction-equipment-operator?step=1";
 
     send({
       msg: {

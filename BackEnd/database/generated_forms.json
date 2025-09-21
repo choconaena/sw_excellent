@@ -1,0 +1,362 @@
+[
+  {
+    "id": "information_open",
+    "title": "정보공개청구",
+    "icon": "📋",
+    "requiresRecording": true,
+    "isSystem": true,
+    "route": "https://yangcheon.ai.kr:28443/정보공개청구",
+    "tabletRoute": "https://yangcheon.ai.kr:28443/tablet/consultation?view=form&step=consent-collection",
+    "createdAt": "2025-09-21T13:56:09.134Z",
+    "enabled": true
+  },
+  {
+    "id": "construction_machinery_license",
+    "title": "건설기계조종사면허(재)발급",
+    "icon": "🚜",
+    "requiresRecording": false,
+    "isSystem": true,
+    "route": "https://yangcheon.ai.kr:28443/건설기계조종사면허",
+    "tabletRoute": "https://yangcheon.ai.kr:28443/tablet/construction-equipment-operator?step=1",
+    "createdAt": "2025-09-21T13:56:09.134Z",
+    "enabled": true
+  },
+  {
+    "id": "test_application",
+    "title": "테스트",
+    "icon": "📄",
+    "requiresRecording": true,
+    "isSystem": false,
+    "route": "https://yangcheon.ai.kr:28443/테스트",
+    "tabletRoute": "https://yangcheon.ai.kr:28443/tablet/dynamic-consultation?form=%ED%85%8C%EC%8A%A4%ED%8A%B8&step=form&substep=1",
+    "schema": {
+      "reportType": "test_application",
+      "file_name": "test_generated.hwp",
+      "directInput": {
+        "applicantData": {
+          "name": {
+            "type": "text",
+            "label": "성명",
+            "required": true,
+            "placeholder": "홍길동",
+            "validation": "정확한 본인 성명 입력 필수"
+          },
+          "birthDate": {
+            "type": "date",
+            "label": "생년월일",
+            "required": true,
+            "validation": "신분증과 일치해야 함"
+          },
+          "address": {
+            "type": "text",
+            "label": "주소",
+            "required": true,
+            "validation": "현재 거주지 주소"
+          },
+          "phone": {
+            "type": "text",
+            "label": "전화번호",
+            "required": true,
+            "validation": "연락 가능한 번호"
+          }
+        },
+        "documentData": {
+          "issueType": {
+            "type": "radio",
+            "label": "발급 구분",
+            "required": true,
+            "options": [
+              "신규발급",
+              "재발급"
+            ]
+          }
+        },
+        "signature": {
+          "applicantSignature": {
+            "type": "canvas",
+            "label": "신청인 서명",
+            "required": true
+          }
+        }
+      },
+      "sttGenerated": {
+        "purposeData": {
+          "applicationReason": {
+            "type": "textarea",
+            "label": "신청 사유",
+            "required": true,
+            "aiPrompt": "민원인의 상담 내용에서 구체적인 신청 사유를 추출하여 공식적인 문체로 작성"
+          },
+          "usagePurpose": {
+            "type": "textarea",
+            "label": "용도",
+            "required": true,
+            "aiPrompt": "증명서를 어디에 사용할 것인지 상담 내용에서 파악하여 명확하게 작성"
+          }
+        }
+      },
+      "instructions": [
+        "양식 작성 안내사항들"
+      ]
+    },
+    "createdAt": "2025-09-21T14:12:38.861Z",
+    "enabled": true,
+    "formName": "테스트",
+    "fileName": "test.hwp"
+  },
+  {
+    "id": "testkill",
+    "title": "testkill",
+    "icon": "📄",
+    "requiresRecording": true,
+    "isSystem": false,
+    "route": "https://yangcheon.ai.kr:28443/testkill",
+    "tabletRoute": "https://yangcheon.ai.kr:28443/tablet/dynamic-consultation?form=testkill&step=form&substep=1",
+    "schema": {
+      "reportType": "testkill",
+      "file_name": "testkill_generated.hwp",
+      "directInput": {
+        "applicantData": {
+          "name": {
+            "type": "text",
+            "label": "성명",
+            "required": true,
+            "placeholder": "홍길동",
+            "validation": "정확한 본인 성명 입력 필수"
+          },
+          "birthDate": {
+            "type": "date",
+            "label": "생년월일",
+            "required": true,
+            "validation": "신분증과 일치해야 함"
+          },
+          "address": {
+            "type": "text",
+            "label": "주소",
+            "required": true,
+            "validation": "현재 거주지 주소"
+          },
+          "phone": {
+            "type": "text",
+            "label": "전화번호",
+            "required": true,
+            "validation": "연락 가능한 번호"
+          }
+        },
+        "documentData": {
+          "issueType": {
+            "type": "radio",
+            "label": "발급 구분",
+            "required": true,
+            "options": [
+              "신규발급",
+              "재발급"
+            ]
+          }
+        },
+        "signature": {
+          "applicantSignature": {
+            "type": "canvas",
+            "label": "신청인 서명",
+            "required": true
+          }
+        }
+      },
+      "sttGenerated": {
+        "purposeData": {
+          "applicationReason": {
+            "type": "textarea",
+            "label": "신청 사유",
+            "required": true,
+            "aiPrompt": "민원인의 상담 내용에서 구체적인 신청 사유를 추출하여 공식적인 문체로 작성"
+          },
+          "usagePurpose": {
+            "type": "textarea",
+            "label": "용도",
+            "required": true,
+            "aiPrompt": "증명서를 어디에 사용할 것인지 상담 내용에서 파악하여 명확하게 작성"
+          }
+        }
+      },
+      "instructions": [
+        "모든 필수 항목을 정확히 기입해주세요.",
+        "신청인 서명란에 본인의 서명을 기입해주세요.",
+        "발급 구분을 선택해주세요."
+      ]
+    },
+    "createdAt": "2025-09-21T14:31:28.583Z",
+    "enabled": true,
+    "formName": "testkill",
+    "fileName": "test.hwp"
+  },
+  {
+    "id": "123123123",
+    "title": "123123123",
+    "icon": "📄",
+    "requiresRecording": true,
+    "isSystem": false,
+    "route": "https://yangcheon.ai.kr:28443/123123123",
+    "tabletRoute": "https://yangcheon.ai.kr:28443/tablet/dynamic-consultation?form=123123123&step=form&substep=1",
+    "schema": {
+      "reportType": "123123123",
+      "file_name": "test_generated.hwp",
+      "directInput": {
+        "applicantData": {
+          "name": {
+            "type": "text",
+            "label": "성명",
+            "required": true,
+            "placeholder": "홍길동",
+            "validation": "정확한 본인 성명 입력 필수"
+          },
+          "birthDate": {
+            "type": "date",
+            "label": "생년월일",
+            "required": true,
+            "validation": "신분증과 일치해야 함"
+          },
+          "address": {
+            "type": "text",
+            "label": "주소",
+            "required": true,
+            "validation": "현재 거주지 주소"
+          },
+          "phone": {
+            "type": "text",
+            "label": "전화번호",
+            "required": true,
+            "validation": "연락 가능한 번호"
+          }
+        },
+        "documentData": {
+          "issueType": {
+            "type": "radio",
+            "label": "발급 구분",
+            "required": true,
+            "options": [
+              "신규발급",
+              "재발급"
+            ]
+          }
+        },
+        "signature": {
+          "applicantSignature": {
+            "type": "canvas",
+            "label": "신청인 서명",
+            "required": true
+          }
+        }
+      },
+      "sttGenerated": {
+        "purposeData": {
+          "applicationReason": {
+            "type": "textarea",
+            "label": "신청 사유",
+            "required": true,
+            "aiPrompt": "민원인의 상담 내용에서 구체적인 신청 사유를 추출하여 공식적인 문체로 작성"
+          },
+          "usagePurpose": {
+            "type": "textarea",
+            "label": "용도",
+            "required": true,
+            "aiPrompt": "증명서를 어디에 사용할 것인지 상담 내용에서 파악하여 명확하게 작성"
+          }
+        }
+      },
+      "instructions": [
+        "모든 필수 항목을 정확히 기입하세요.",
+        "신청인 서명란에 본인의 서명을 기입하세요.",
+        "신청일은 서명일과 동일하게 작성하세요."
+      ]
+    },
+    "createdAt": "2025-09-21T14:32:33.638Z",
+    "enabled": true,
+    "formName": "123123123",
+    "fileName": "test.hwp"
+  },
+  {
+    "id": "수렵면허신청서",
+    "title": "수렵면허신청서",
+    "icon": "📄",
+    "requiresRecording": true,
+    "isSystem": false,
+    "route": "https://yangcheon.ai.kr:28443/수렵면허신청서",
+    "tabletRoute": "https://yangcheon.ai.kr:28443/tablet/dynamic-consultation?form=%EC%88%98%EB%A0%B5%EB%A9%B4%ED%97%88%EC%8B%A0%EC%B2%AD%EC%84%9C&step=form&substep=1",
+    "schema": {
+      "reportType": "수렵면허신청서",
+      "file_name": "test.hwp",
+      "directInput": {
+        "applicantData": {
+          "name": {
+            "type": "text",
+            "label": "성명",
+            "required": true,
+            "placeholder": "홍길동",
+            "validation": "정확한 본인 성명 입력 필수"
+          },
+          "birthDate": {
+            "type": "date",
+            "label": "생년월일",
+            "required": true,
+            "validation": "신분증과 일치해야 함"
+          },
+          "address": {
+            "type": "text",
+            "label": "주소",
+            "required": true,
+            "validation": "현재 거주지 주소"
+          },
+          "phone": {
+            "type": "text",
+            "label": "전화번호",
+            "required": true,
+            "validation": "연락 가능한 번호"
+          }
+        },
+        "documentData": {
+          "issueType": {
+            "type": "radio",
+            "label": "발급 구분",
+            "required": true,
+            "options": [
+              "신규발급",
+              "재발급"
+            ]
+          }
+        },
+        "signature": {
+          "applicantSignature": {
+            "type": "canvas",
+            "label": "신청인 서명",
+            "required": true
+          }
+        }
+      },
+      "sttGenerated": {
+        "purposeData": {
+          "applicationReason": {
+            "type": "textarea",
+            "label": "신청 사유",
+            "required": true,
+            "aiPrompt": "민원인의 상담 내용에서 구체적인 신청 사유를 추출하여 공식적인 문체로 작성"
+          },
+          "usagePurpose": {
+            "type": "textarea",
+            "label": "용도",
+            "required": true,
+            "aiPrompt": "증명서를 어디에 사용할 것인지 상담 내용에서 파악하여 명확하게 작성"
+          }
+        }
+      },
+      "instructions": [
+        "모든 필수 입력란을 정확히 기입하십시오.",
+        "신청 사유와 용도는 구체적으로 작성해야 합니다.",
+        "신청인 서명란에 본인의 서명을 기입하십시오."
+      ]
+    },
+    "createdAt": "2025-09-21T18:07:16.253Z",
+    "enabled": true,
+    "formName": "수렵면허신청서",
+    "fileName": "test.hwp"
+  }
+]

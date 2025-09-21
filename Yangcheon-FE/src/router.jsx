@@ -14,6 +14,9 @@ import ConstructionEquipmentOperator from "./pages/tablet/construction-equipment
 import TabletLayout from "./layouts/TabletLayout";
 import UserTypeSelection from "./pages/UserTypeSelection";
 import FormGenerator from "./pages/web/form-generator";
+import DynamicForm from "./pages/web/dynamic-form";
+import DynamicConsultation from "./pages/web/dynamic-consultation";
+import TabletDynamicConsultation from "./pages/tablet/dynamic-consultation";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +27,8 @@ const router = createBrowserRouter([
       { path: "/", element: <UserTypeSelection /> },
       { path: "/admin", element: <WebHome /> },
       { path: "/admin/form-generator", element: <FormGenerator /> },
+      { path: "/dynamic-form", element: <DynamicForm /> },
+      { path: "/dynamic-consultation", element: <DynamicConsultation /> },
       { path: "/consultation", element: <WebConsultation /> },
       { path: "/consultation/start", element: <ConsultationStart /> },
       { path: "/consultation/complete", element: <CompletionScreen /> },
@@ -43,6 +48,10 @@ const router = createBrowserRouter([
           {
             path: "construction-equipment-operator",
             element: <ConstructionEquipmentOperator />,
+          },
+          {
+            path: "dynamic-consultation",
+            element: <TabletDynamicConsultation />,
           },
         ],
       },

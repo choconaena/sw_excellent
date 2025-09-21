@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import MainLayout from "../../../layouts/MainLayout";
 import * as S from "./style";
 
 const FormGenerator = () => {
+  const navigate = useNavigate();
   const [formName, setFormName] = useState("");
   const [hwpFile, setHwpFile] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -46,6 +48,64 @@ const FormGenerator = () => {
     }
   };
 
+  const saveTemplateHWP = async (formSchema, hwpFile) => {
+    try {
+      console.log('템플릿 HWP 파일 저장 중...');
+
+      const formData = new FormData();
+      formData.append('hwpFile', hwpFile);
+      formData.append('reportType', formSchema.reportType);
+      formData.append('templateName', formSchema.reportType + '.hwp');
+
+      const response = await fetch('http://localhost:28090/save-template', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        console.log('템플릿 HWP 파일 저장 완료');
+      } else {
+        console.warn('템플릿 저장 실패, 계속 진행');
+      }
+    } catch (error) {
+      console.warn('템플릿 저장 오류:', error.message);
+      // 템플릿 저장 실패해도 양식 생성은 계속 진행
+    }
+  };
+
+  const generateReactComponent = async (formSchema, formName) => {
+    try {
+      console.log('React 컴포넌트 자동 생성 중...');
+
+      const response = await fetch('http://localhost:23000/ai/generate-component', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          formSchema: formSchema,
+          formName: formName
+        })
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        if (result.success) {
+          console.log('🎨 React 컴포넌트 자동 생성 완료!');
+          console.log('생성된 파일들:', result.data.files);
+          console.log('저장 경로:', result.data.savedPath);
+        } else {
+          console.warn('React 컴포넌트 생성 실패:', result.error);
+        }
+      } else {
+        console.warn('React 컴포넌트 생성 API 호출 실패');
+      }
+    } catch (error) {
+      console.warn('React 컴포넌트 생성 오류:', error.message);
+      // 컴포넌트 생성 실패해도 양식 생성은 계속 진행
+    }
+  };
+
   const handleGenerate = async () => {
     if (!formName.trim()) {
       alert('서식명을 입력해주세요.');
@@ -58,20 +118,46 @@ const FormGenerator = () => {
 
     setIsProcessing(true);
     try {
-      // TODO: 실제 처리 로직 구현
       console.log('양식 생성 시작:', { formName, hwpFile: hwpFile.name });
 
-      // 임시로 3초 대기
-      await new Promise(resolve => setTimeout(resolve, 3000));
+      // FormData 생성 (실제 HWP 파일 업로드용)
+      const formData = new FormData();
+      formData.append('hwpFile', hwpFile);
+      formData.append('formName', formName);
 
-      alert('양식이 성공적으로 생성되었습니다!');
+      // 백엔드 API 호출
+      const response = await fetch('http://localhost:23000/ai/analyze-hwp', {
+        method: 'POST',
+        body: formData
+      });
 
-      // 초기화
-      setFormName("");
-      setHwpFile(null);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log('AI 분석 결과:', result);
+
+      if (result.success) {
+        console.log('생성된 양식 스키마:', result.data);
+
+        // 템플릿 HWP 파일 저장 요청
+        await saveTemplateHWP(result.data, hwpFile);
+
+        // React 컴포넌트 자동 생성 요청
+        await generateReactComponent(result.data, formName);
+
+        alert(`양식이 성공적으로 생성되었습니다!\n\n분석된 필드:\n- 직접 입력 필드: ${Object.keys(result.data.directInput?.applicantData || {}).length}개\n- AI 생성 필드: ${Object.keys(result.data.sttGenerated?.purposeData || {}).length}개\n\n🎨 React 컴포넌트도 자동 생성되었습니다!\n\n메인 화면에서 생성된 양식을 선택하여 사용하세요!`);
+
+        // 메인홈으로 이동 (양식 목록에서 선택하도록)
+        navigate('/consultation/start');
+      } else {
+        throw new Error(result.error || '양식 분석 실패');
+      }
+
     } catch (error) {
       console.error('양식 생성 중 오류:', error);
-      alert('양식 생성 중 오류가 발생했습니다.');
+      alert(`양식 생성 중 오류가 발생했습니다:\n${error.message}`);
     } finally {
       setIsProcessing(false);
     }

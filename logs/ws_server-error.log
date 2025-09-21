@@ -2,3 +2,7 @@
 Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 To eliminate this warning, add "type": "module" to /new_data/sw_excellent/BackEnd/package.json.
 (Use `node --trace-warnings ...` to show where the warning was created)
+(node:343054) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///new_data/sw_excellent/BackEnd/WS/ws_server.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /new_data/sw_excellent/BackEnd/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)

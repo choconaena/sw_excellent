@@ -51,7 +51,7 @@ const IssuanceSignatureStep = ({ onNext }) => {
       msg: {
         msg_type: "page_move",
         content: {
-          dst: "/tablet/construction-equipment-operator?view=form&step=requirements",
+          dst: "https://yangcheon.ai.kr:28443/tablet/construction-equipment-operator?view=form&step=requirements",
         },
       },
     });

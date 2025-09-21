@@ -171,7 +171,7 @@ const ApplicationFormStep = ({ formData, onInputChange, onNext }) => {
 
       alert(res?.msg || "발급 신청 정보 전송에 성공했습니다.");
       const dst =
-        "/tablet/construction-equipment-operator?view=form&step=signature1";
+        "https://yangcheon.ai.kr:28443/tablet/construction-equipment-operator?view=form&step=signature1";
       sendRoute({ msg: { msg_type: "page_move", content: { dst } } });
       onNext();
     } catch (e) {

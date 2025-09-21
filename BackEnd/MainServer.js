@@ -14,10 +14,15 @@ require('dotenv').config();
 // CORS 미들웨어 사용 (모든 출처에 대해 허용)
 app.use(cors());
 
+// JSON 및 URL-encoded 파싱 미들웨어
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+
 // 라우팅 파일 불러오기
 const aiRoutes = require('./URIProcess/AI_URI_Process');
 const dbRoutes = require('./URIProcess/DB_URI_Process');
 const remoteDataRoutes = require('./URIProcess/RD_URI_Process');
+const formManagementRoutes = require('./URIProcess/Form_Management_Process');
 
 ///////////////////////////////////////////////
 //////////////////// 라우팅 ////////////////////
@@ -26,11 +31,12 @@ const remoteDataRoutes = require('./URIProcess/RD_URI_Process');
 app.use('/ai', aiRoutes);
 app.use('/db', dbRoutes);
 app.use('/remotedata', remoteDataRoutes);
+app.use('/forms', formManagementRoutes);
 
-// http server
-// app.listen(port, () => {
-//     console.log(`Server running at http://localhost:${port}`);
-// });
+// HTTP 서버 활성화
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+});
 
 /////////////////////////////////////////////////
 //////////////////// https //////////////////////
@@ -145,8 +151,9 @@ if (!fs.existsSync(uploadDir)) {
 // === 종료 시 모든 Python 프로세스를 정리 === //
 function cleanup() {
   console.log('Cleaning up child Python processes...');
-  pythonEmbeddingModel.kill();
-  pythonSttModel.kill();
+  // Python 프로세스가 정의되어 있을 때만 종료
+  // pythonEmbeddingModel.kill();
+  // pythonSttModel.kill();
   process.exit(); // Node 자체 종료
 }
 
