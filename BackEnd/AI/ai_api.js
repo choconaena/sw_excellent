@@ -91,7 +91,7 @@ async function runAIFunc_abstract(reportid, email, txt_file_path){
 async function analyzeHWPWithGPT(hwpContent, formName) {
     // API 키 체크 (sk-로 시작하지 않거나 기본값이면 mock 데이터 사용)
     const apiKey = process.env.OPENAI_API_KEY;
-    if (!apiKey || apiKey === 'your_openai_api_key_here' || apiKey === 'sk-your-actual-openai-api-key-here' || !apiKey.startsWith('sk-')) {
+    if (!apiKey || apiKey === 'your_openai_api_key_here' || apiKey === 'OPENAI_KEY_PLACEHOLDER' || !apiKey.startsWith('sk-')) {
         console.log('⚠️ OpenAI API 키가 설정되지 않음. Mock 데이터 반환.');
         console.log('💡 실제 GPT 모델을 사용하려면 .env 파일에 올바른 API 키를 설정하세요.');
         return {
@@ -340,7 +340,7 @@ async function analyzeTestHWP() {
 // React 컴포넌트 자동 생성을 위한 GPT API 함수
 async function generateReactComponent(formSchema, formName) {
     const apiKey = process.env.OPENAI_API_KEY;
-    if (!apiKey || apiKey === 'your_openai_api_key_here' || apiKey === 'sk-your-actual-openai-api-key-here' || !apiKey.startsWith('sk-')) {
+    if (!apiKey || apiKey === 'your_openai_api_key_here' || apiKey === 'OPENAI_KEY_PLACEHOLDER' || !apiKey.startsWith('sk-')) {
         console.log('⚠️ OpenAI API 키가 설정되지 않음. React 컴포넌트 생성 불가.');
         return {
             success: false,
@@ -465,7 +465,7 @@ async function extractSTTFields(sttContent, formSchema, currentFormData) {
     }
 
     const apiKey = process.env.OPENAI_API_KEY;
-    if (!apiKey || apiKey === 'your_openai_api_key_here' || apiKey === 'sk-your-actual-openai-api-key-here' || !apiKey.startsWith('sk-')) {
+    if (!apiKey || apiKey === 'your_openai_api_key_here' || apiKey === 'OPENAI_KEY_PLACEHOLDER' || !apiKey.startsWith('sk-')) {
       console.log('⚠️ OpenAI API 키가 설정되지 않음. Mock 데이터 반환.');
       return { success: true, data: {} };
     }
