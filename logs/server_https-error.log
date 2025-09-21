@@ -47,3 +47,27 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.8/dist-packages/torch/nn/modules/module.py", line 1160, in convert
     return t.to(
 torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 15.57 GiB of which 5.44 MiB is free. Process 4030470 has 6.47 GiB memory in use. Including non-PyTorch memory, this process has 4.49 GiB memory in use. Process 4168300 has 4.60 GiB memory in use. Of the allocated memory 4.26 GiB is allocated by PyTorch, and 112.67 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+connection handler failed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/websockets/legacy/server.py", line 245, in handler
+    await self.ws_handler(self)
+  File "/new_data/sw_excellent/BackEnd/AI/funcs/stt_AI/server_https.py", line 96, in handle_client
+    stt_processor = WhisperSTT(
+  File "/new_data/sw_excellent/BackEnd/AI/funcs/stt_AI/my_whisper.py", line 68, in __init__
+    self.model = AutoModelForSpeechSeq2Seq.from_pretrained(model_path, local_files_only=True).to(device)
+  File "/usr/local/lib/python3.8/dist-packages/transformers/modeling_utils.py", line 3157, in to
+    return super().to(*args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/torch/nn/modules/module.py", line 1174, in to
+    return self._apply(convert)
+  File "/usr/local/lib/python3.8/dist-packages/torch/nn/modules/module.py", line 780, in _apply
+    module._apply(fn)
+  File "/usr/local/lib/python3.8/dist-packages/torch/nn/modules/module.py", line 780, in _apply
+    module._apply(fn)
+  File "/usr/local/lib/python3.8/dist-packages/torch/nn/modules/module.py", line 780, in _apply
+    module._apply(fn)
+  [Previous line repeated 2 more times]
+  File "/usr/local/lib/python3.8/dist-packages/torch/nn/modules/module.py", line 805, in _apply
+    param_applied = fn(param)
+  File "/usr/local/lib/python3.8/dist-packages/torch/nn/modules/module.py", line 1160, in convert
+    return t.to(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 26.00 MiB. GPU 0 has a total capacity of 15.57 GiB of which 7.44 MiB is free. Process 4030470 has 6.47 GiB memory in use. Including non-PyTorch memory, this process has 6.91 GiB memory in use. Process 190346 has 2.19 GiB memory in use. Of the allocated memory 6.63 GiB is allocated by PyTorch, and 159.99 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

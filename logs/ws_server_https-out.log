@@ -179,3 +179,186 @@ WSS(Socket.IO) listening on https://0.0.0.0:28087
 [join] wSzcY66Dfw8cod3AAAAX -> jun@test.com (1)
 [msg] wSzcY66Dfw8cod3AAAAX @jun@test.com: [object Object]
 [conn] wg8SmplYB050xwIeAAAZ
+[disc] wg8SmplYB050xwIeAAAZ (transport close)
+[conn] IQn5uqwrtqQfuPypAAAb
+[msg] IQn5uqwrtqQfuPypAAAb @jun@test.com: [object Object]
+[leave] IQn5uqwrtqQfuPypAAAb -/-> jun@test.com (1)
+[leave] wSzcY66Dfw8cod3AAAAX -/-> jun@test.com (0)
+[disc] IQn5uqwrtqQfuPypAAAb (client namespace disconnect)
+[disc] wSzcY66Dfw8cod3AAAAX (client namespace disconnect)
+[conn] rltvHb_uYEg0kq_pAAAd
+[msg] rltvHb_uYEg0kq_pAAAd @jun@test.com: [object Object]
+[join] rltvHb_uYEg0kq_pAAAd -> jun@test.com (1)
+[join] rltvHb_uYEg0kq_pAAAd -> jun@test.com (1)
+[join] rltvHb_uYEg0kq_pAAAd -> jun@test.com (1)
+[msg] rltvHb_uYEg0kq_pAAAd @jun@test.com: [object Object]
+[conn] 1CcEFIlNBNCN_ixMAAAg
+[join] 1CcEFIlNBNCN_ixMAAAg -> jun@test.com (2)
+[msg] 1CcEFIlNBNCN_ixMAAAg @jun@test.com: [object Object]
+[join] 1CcEFIlNBNCN_ixMAAAg -> jun@test.com (2)
+[msg] 1CcEFIlNBNCN_ixMAAAg @jun@test.com: [object Object]
+[leave] 1CcEFIlNBNCN_ixMAAAg -/-> jun@test.com (1)
+[leave] rltvHb_uYEg0kq_pAAAd -/-> jun@test.com (0)
+[msg] rltvHb_uYEg0kq_pAAAd @jun@test.com: [object Object]
+[disc] 1CcEFIlNBNCN_ixMAAAg (client namespace disconnect)
+[disc] rltvHb_uYEg0kq_pAAAd (client namespace disconnect)
+[conn] y8fGIyqgjNYBDwMAAAAi
+[msg] y8fGIyqgjNYBDwMAAAAi @jun@test.com: [object Object]
+[join] y8fGIyqgjNYBDwMAAAAi -> jun@test.com (1)
+[join] y8fGIyqgjNYBDwMAAAAi -> jun@test.com (1)
+[join] y8fGIyqgjNYBDwMAAAAi -> jun@test.com (1)
+[msg] y8fGIyqgjNYBDwMAAAAi @jun@test.com: [object Object]
+[conn] eUwao6d15zm_OxVMAAAk
+[join] eUwao6d15zm_OxVMAAAk -> jun@test.com (2)
+[msg] eUwao6d15zm_OxVMAAAk @jun@test.com: [object Object]
+[leave] eUwao6d15zm_OxVMAAAk -/-> jun@test.com (1)
+[leave] y8fGIyqgjNYBDwMAAAAi -/-> jun@test.com (0)
+[disc] eUwao6d15zm_OxVMAAAk (client namespace disconnect)
+[disc] y8fGIyqgjNYBDwMAAAAi (client namespace disconnect)
+[conn] lFfOSZGo2IJiJAu4AAAm
+[msg] lFfOSZGo2IJiJAu4AAAm @jun@test.com: [object Object]
+[join] lFfOSZGo2IJiJAu4AAAm -> jun@test.com (1)
+[join] lFfOSZGo2IJiJAu4AAAm -> jun@test.com (1)
+[join] lFfOSZGo2IJiJAu4AAAm -> jun@test.com (1)
+[msg] lFfOSZGo2IJiJAu4AAAm @jun@test.com: [object Object]
+[conn] 9b3De1vjZ2JBqThTAAAp
+[msg] 9b3De1vjZ2JBqThTAAAp @jun@test.com: [object Object]
+[leave] 9b3De1vjZ2JBqThTAAAp -/-> jun@test.com (1)
+[leave] lFfOSZGo2IJiJAu4AAAm -/-> jun@test.com (0)
+[disc] 9b3De1vjZ2JBqThTAAAp (client namespace disconnect)
+[disc] lFfOSZGo2IJiJAu4AAAm (client namespace disconnect)
+[conn] UNa1Mkfmd7Io_FVUAAAr
+[msg] UNa1Mkfmd7Io_FVUAAAr @jun@test.com: [object Object]
+[join] UNa1Mkfmd7Io_FVUAAAr -> jun@test.com (1)
+[join] UNa1Mkfmd7Io_FVUAAAr -> jun@test.com (1)
+[join] UNa1Mkfmd7Io_FVUAAAr -> jun@test.com (1)
+[msg] UNa1Mkfmd7Io_FVUAAAr @jun@test.com: [object Object]
+[conn] Ol0KwXGLh2VJcgJZAAAt
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[join] Ol0KwXGLh2VJcgJZAAAt -> jun@test.com (2)
+[join] Ol0KwXGLh2VJcgJZAAAt -> jun@test.com (2)
+[msg] UNa1Mkfmd7Io_FVUAAAr @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] UNa1Mkfmd7Io_FVUAAAr @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] UNa1Mkfmd7Io_FVUAAAr @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[msg] Ol0KwXGLh2VJcgJZAAAt @jun@test.com: [object Object]
+[disc] Ol0KwXGLh2VJcgJZAAAt (transport close)
+[conn] OLDHJ7-Nc0Au-UOVAAAv
+[msg] OLDHJ7-Nc0Au-UOVAAAv @jun@test.com: [object Object]
+[msg] OLDHJ7-Nc0Au-UOVAAAv @jun@test.com: [object Object]
+[join] OLDHJ7-Nc0Au-UOVAAAv -> jun@test.com (2)
+[msg] OLDHJ7-Nc0Au-UOVAAAv @jun@test.com: [object Object]
+[leave] OLDHJ7-Nc0Au-UOVAAAv -/-> jun@test.com (1)
+[leave] UNa1Mkfmd7Io_FVUAAAr -/-> jun@test.com (0)
+[msg] UNa1Mkfmd7Io_FVUAAAr @jun@test.com: [object Object]
+[disc] UNa1Mkfmd7Io_FVUAAAr (client namespace disconnect)
+[disc] OLDHJ7-Nc0Au-UOVAAAv (client namespace disconnect)
+[conn] EHOpgmqqcBjuygHXAAAx
+[msg] EHOpgmqqcBjuygHXAAAx @jun@test.com: [object Object]
+[join] EHOpgmqqcBjuygHXAAAx -> jun@test.com (1)
+[join] EHOpgmqqcBjuygHXAAAx -> jun@test.com (1)
+[join] EHOpgmqqcBjuygHXAAAx -> jun@test.com (1)
+[msg] EHOpgmqqcBjuygHXAAAx @jun@test.com: [object Object]
+[conn] szJ6GYv6N_kFT396AAAz
+[msg] szJ6GYv6N_kFT396AAAz @jun@test.com: [object Object]
+[msg] szJ6GYv6N_kFT396AAAz @jun@test.com: [object Object]
+[msg] szJ6GYv6N_kFT396AAAz @jun@test.com: [object Object]
+[join] szJ6GYv6N_kFT396AAAz -> jun@test.com (2)
+[join] szJ6GYv6N_kFT396AAAz -> jun@test.com (2)
+[msg] szJ6GYv6N_kFT396AAAz @jun@test.com: [object Object]
+[msg] EHOpgmqqcBjuygHXAAAx @jun@test.com: [object Object]
+[msg] szJ6GYv6N_kFT396AAAz @jun@test.com: [object Object]
+[leave] szJ6GYv6N_kFT396AAAz -/-> jun@test.com (1)
+[leave] EHOpgmqqcBjuygHXAAAx -/-> jun@test.com (0)
+[msg] EHOpgmqqcBjuygHXAAAx @jun@test.com: [object Object]
+[disc] EHOpgmqqcBjuygHXAAAx (client namespace disconnect)
+[disc] szJ6GYv6N_kFT396AAAz (client namespace disconnect)
+[conn] hBPRjawzvJC4VERIAAA1
+[msg] hBPRjawzvJC4VERIAAA1 @jun@test.com: [object Object]
+[join] hBPRjawzvJC4VERIAAA1 -> jun@test.com (1)
+[join] hBPRjawzvJC4VERIAAA1 -> jun@test.com (1)
+[join] hBPRjawzvJC4VERIAAA1 -> jun@test.com (1)
+[msg] hBPRjawzvJC4VERIAAA1 @jun@test.com: [object Object]
+[conn] yxvfvyGb6spRgG8lAAA3
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[join] yxvfvyGb6spRgG8lAAA3 -> jun@test.com (2)
+[join] yxvfvyGb6spRgG8lAAA3 -> jun@test.com (2)
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] hBPRjawzvJC4VERIAAA1 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] hBPRjawzvJC4VERIAAA1 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[msg] hBPRjawzvJC4VERIAAA1 @jun@test.com: [object Object]
+[msg] yxvfvyGb6spRgG8lAAA3 @jun@test.com: [object Object]
+[leave] yxvfvyGb6spRgG8lAAA3 -/-> jun@test.com (1)
+[disc] yxvfvyGb6spRgG8lAAA3 (client namespace disconnect)
+[msg] hBPRjawzvJC4VERIAAA1 @jun@test.com: [object Object]

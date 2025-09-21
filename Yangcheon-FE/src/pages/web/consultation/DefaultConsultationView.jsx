@@ -1,5 +1,6 @@
 // DefaultConsultationView.jsx
 import { useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import * as S from "./style";
 
 const normalize = (v) =>
@@ -14,6 +15,7 @@ const DefaultConsultationView = ({
   services = [],
   onServiceClick,
 }) => {
+  const navigate = useNavigate();
   // 1) 검색어로 서비스 목록 필터링
   const filteredServices = useMemo(() => {
     const q = normalize(searchQuery);
@@ -121,6 +123,21 @@ const DefaultConsultationView = ({
                 <S.ServiceArrow $isRecording={false}>→</S.ServiceArrow>
               </S.ServiceCard>
             ))}
+
+            {/* 신규 양식 추가 카드 */}
+            <S.AddFormCard onClick={() => navigate("/admin/form-generator")}>
+              <S.AddFormHeader>
+                <S.AddFormIcon>➕</S.AddFormIcon>
+                <S.AddFormBadge>관리자</S.AddFormBadge>
+              </S.AddFormHeader>
+              <S.AddFormContent>
+                <S.AddFormTitle>새 양식 추가</S.AddFormTitle>
+                <S.AddFormDescription>
+                  새로운 민원 양식을 시스템에 추가
+                </S.AddFormDescription>
+              </S.AddFormContent>
+              <S.AddFormArrow>→</S.AddFormArrow>
+            </S.AddFormCard>
           </S.ServiceGrid>
         </S.ServiceSection>
       </S.ServiceCategoriesWrapper>

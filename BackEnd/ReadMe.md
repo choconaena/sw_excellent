@@ -167,6 +167,20 @@ Uniform Resource Identifier)](https://en.wikipedia.org/wiki/Uniform_Resource_Ide
    ```
 ![image](https://github.com/user-attachments/assets/6a125d97-ed9f-4092-9b26-fc10fb394dbe)
 
+3. **doker**
+   - 다음 명령어로 실행
+   docker rm -f yangcheon-fe-test 2>/dev/null || true
+   ```
+      docker run -d --name yangcheon-fe-test \
+      -p 28080:20080 \
+      -p 28443:28443 \
+      -v /new_data/sw_excellent/Yangcheon-FE/deploy/nginx.conf:/etc/nginx/conf.d/default.conf:ro \
+      -v /new_data/sw_excellent/Yangcheon-FE/certbot-etc/live:/etc/letsencrypt/live:ro \
+      -v /new_data/sw_excellent/Yangcheon-FE/certbot-etc/archive:/etc/letsencrypt/archive:ro \
+      --health-cmd='wget -qO- http://127.0.0.1:20080/healthz || exit 1' \
+      --health-interval=30s --health-timeout=3s --health-start-period=10s \
+      yangcheon-fe-web:test
+   ```
 
 
 ## 앞으로 추가할 기능

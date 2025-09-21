@@ -835,3 +835,82 @@ export const ServiceArrow = styled.div`
     transform: translateX(5px);
   }
 `;
+
+// 신규 양식 추가 카드 스타일들
+export const AddFormCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 2px dashed #adb5bd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 180px;
+
+  &:hover {
+    border-color: #6c757d;
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.2);
+  }
+`;
+
+export const AddFormHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+`;
+
+export const AddFormIcon = styled.div`
+  font-size: 2rem;
+  color: #6c757d;
+`;
+
+export const AddFormBadge = styled.div`
+  background: #6c757d;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+`;
+
+export const AddFormContent = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+`;
+
+export const AddFormTitle = styled.h4`
+  font-size: 1.2rem;
+  color: #495057;
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.3;
+`;
+
+export const AddFormDescription = styled.p`
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin: 0;
+  line-height: 1.4;
+  font-weight: 500;
+`;
+
+export const AddFormArrow = styled.div`
+  font-size: 1.5rem;
+  color: #6c757d;
+  align-self: flex-end;
+  margin-top: auto;
+  transition: transform 0.3s ease;
+  font-weight: bold;
+
+  ${AddFormCard}:hover & {
+    transform: translateX(5px);
+  }
+`;

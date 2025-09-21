@@ -11,6 +11,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
   const menuItems = [
     { id: "home", label: "메인홈", icon: "🏠", path: "/admin" },
     { id: "records", label: "업무기록", icon: "📋", path: "/records" },
+    { id: "form-generator", label: "신규 양식", icon: "📝", path: "/admin/form-generator" },
   ];
 
   const handleMenuClick = async (path) => {

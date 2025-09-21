@@ -16,14 +16,14 @@ pm2 start /new_data/sw_excellent/BackEnd/AI/funcs/stt_AI/server.py \
   -- -u /new_data/sw_excellent/BackEnd/AI/funcs/stt_AI/server.py \
   --output /new_data/sw_excellent/logs/stt_ai-out.log \
   --error /new_data/sw_excellent/logs/stt_ai-error.log
-
+  
+'''
 # Ollama Serve 실행
 pm2 start "ollama serve" \
   --name ollama-server_test \
   --output /new_data/sw_excellent/logs/ollama-out.log \
   --error /new_data/sw_excellent/logs/ollama-error.log
-
-/new_data/sw_excellent/BackEnd/WS/server_https.js
+'''
 
 pm2 start /new_data/sw_excellent/BackEnd/AI/funcs/stt_AI/server_https.py \
   --name server_https_test \

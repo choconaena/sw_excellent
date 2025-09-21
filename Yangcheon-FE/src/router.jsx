@@ -13,6 +13,7 @@ import CompletionScreen from "./pages/web/consultationComplete/CompletionScreen"
 import ConstructionEquipmentOperator from "./pages/tablet/construction-equipment-operator";
 import TabletLayout from "./layouts/TabletLayout";
 import UserTypeSelection from "./pages/UserTypeSelection";
+import FormGenerator from "./pages/web/form-generator";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: "/login", element: <Login /> },
       { path: "/", element: <UserTypeSelection /> },
       { path: "/admin", element: <WebHome /> },
+      { path: "/admin/form-generator", element: <FormGenerator /> },
       { path: "/consultation", element: <WebConsultation /> },
       { path: "/consultation/start", element: <ConsultationStart /> },
       { path: "/consultation/complete", element: <CompletionScreen /> },

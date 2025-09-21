@@ -74,3 +74,55 @@ txt_file :  /new_data/sw_excellent/upload3/transcript_1.214.89.64_59324_20250921
 txt_file in server:  /new_data/sw_excellent/upload3/transcript_1.214.89.64_59324_20250921_125149.txt
 [1.214.89.64_59324] AI 요약 응답: 200 {'message': 'VisitCategory updated', 'result': {'success': True, 'updated': 1}}
 클라이언트 해제됨: 1.214.89.64_59324
+클라이언트 등록됨: 1.214.89.64_63577
+[1.214.89.64_63577] 연결 메타데이터 수신: reportid=2040, email=jun@test.com
+[INFO] Loading Whisper model from '/model/my_whisper' on cuda
+[1.214.89.64_63577] STT 모델 로드 완료 메시지 전송
+txt_file :  /new_data/sw_excellent/upload3/transcript_1.214.89.64_63577_20250921_184506.txt
+[1.214.89.64_63577] STT 업데이트 응답: 200 {'status': True, 'msg': 'STT 경로가 성공적으로 업데이트되었습니다. 2040'}
+[SEND to 1.214.89.64_63577] 아 안녕하세요. 지금 테스트 한 번 시작해보겠습니다. STT AI 모델 지금
+[SEND to 1.214.89.64_63577] 컨실레이션 플로우 안에 있습니다. 서명 대기 중이고 그럼 서명을 받아보도록 하겠
+[SEND to 1.214.89.64_63577] 종이를 누르고 서명을 받았습니다.
+[SEND to 1.214.89.64_63577] 자정 완료했고 다음 단계에 진행을 보도록 하겠습니다. 다음 단계 모두 진행을 완료
+[SEND to 1.214.89.64_63577] 배뷰를 했고
+[SEND to 1.214.89.64_63577] 유약하기 버튼을 눌러서 유약 잘 되는지 확인을 해보겠습니다.
+[SEND to 1.214.89.64_63577] 미약 전성되기 좋은 상태에 있습니다.
+[SEND to 1.214.89.64_63577] 오
+[SEND to 1.214.89.64_63577] 다음 단계로 이제 진행하고
+[SEND to 1.214.89.64_63577] 끝
+[SEND to 1.214.89.64_63577] 끝
+[SEND to 1.214.89.64_63577] 끝
+[SEND to 1.214.89.64_63577] 시
+txt_file in server:  /new_data/sw_excellent/upload3/transcript_1.214.89.64_63577_20250921_184506.txt
+클라이언트 등록됨: 1.214.89.64_63631
+[1.214.89.64_63631] 연결 메타데이터 수신: reportid=2041, email=jun@test.com
+[INFO] Loading Whisper model from '/model/my_whisper' on cuda
+[1.214.89.64_63631] STT 모델 로드 완료 메시지 전송
+txt_file :  /new_data/sw_excellent/upload3/transcript_1.214.89.64_63631_20250921_184639.txt
+[1.214.89.64_63631] STT 업데이트 응답: 200 {'status': True, 'msg': 'STT 경로가 성공적으로 업데이트되었습니다. 2041'}
+txt_file in server:  /new_data/sw_excellent/upload3/transcript_1.214.89.64_63631_20250921_184639.txt
+클라이언트 등록됨: 1.214.89.64_26951
+[1.214.89.64_26951] 연결 메타데이터 수신: reportid=2042, email=jun@test.com
+[INFO] Loading Whisper model from '/model/my_whisper' on cuda
+[1.214.89.64_63577] AI 요약 응답: 200 {'message': 'VisitCategory updated', 'result': {'success': True, 'updated': 1}}
+클라이언트 해제됨: 1.214.89.64_63577
+[1.214.89.64_63631] AI 요약 응답: 200 {'message': 'VisitCategory updated', 'result': {'success': True, 'updated': 1}}
+클라이언트 해제됨: 1.214.89.64_63631
+클라이언트 등록됨: 1.214.89.64_63653
+[1.214.89.64_63653] 연결 메타데이터 수신: reportid=2043, email=jun@test.com
+[INFO] Loading Whisper model from '/model/my_whisper' on cuda
+[1.214.89.64_63653] STT 모델 로드 완료 메시지 전송
+txt_file :  /new_data/sw_excellent/upload3/transcript_1.214.89.64_63653_20250921_184655.txt
+[1.214.89.64_63653] STT 업데이트 응답: 200 {'status': True, 'msg': 'STT 경로가 성공적으로 업데이트되었습니다. 2043'}
+[SEND to 1.214.89.64_63653] 안녕하세요. 에스티티브 동료들이 안로드였고 이제
+[SEND to 1.214.89.64_63653] 신문증을 보여주면서 테스트를 시작하겠습니다.
+[SEND to 1.214.89.64_63653] 입금번호를 작성했으면 들어가야 정상해두겠습니다.
+[SEND to 1.214.89.64_63653] 시작하고
+[SEND to 1.214.89.64_63653] 끝
+[SEND to 1.214.89.64_63653] 끄
+[SEND to 1.214.89.64_63653] 끝
+[SEND to 1.214.89.64_63653] 끝
+[SEND to 1.214.89.64_63653] 끄
+txt_file in server:  /new_data/sw_excellent/upload3/transcript_1.214.89.64_63653_20250921_184655.txt
+[1.214.89.64_63653] AI 요약 응답: 200 {'message': 'VisitCategory updated', 'result': {'success': True, 'updated': 1}}
+클라이언트 해제됨: 1.214.89.64_63653

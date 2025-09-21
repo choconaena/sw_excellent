@@ -86,3 +86,30 @@ export const NoticeText = styled.p`
   width: 100%;
   max-width: 1200px;
 `;
+
+export const ButtonGroup = styled.div`
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+`;
+
+export const AddFormButton = styled.button`
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #545b62;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+`;
